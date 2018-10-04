@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <title>Форма заказа товаров в магазине Мишка</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -24,10 +25,10 @@
         </ul>
         <ul class="main-navigation__list user-list">
           <li class="user-list__item user-list__item--search">
-            <a href="#">Поиск по сайту</a>
+            <a class="user-list__link" href="#">Поиск по сайту</a>
           </li>
           <li class="user-list__item user-list__item--cart">
-            <a href="#">Корзина:
+            <a class="user-list__link" href="#">Корзина:
               <span>пока пуста</span>
             </a>
           </li>
@@ -40,6 +41,7 @@
     <p class="form-header__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
       свяжемся с вами, чтобы уточнить детали.</p>
     <section class="order">
+      <div class="order__wrapper">
       <form class="order__form" method="POST" action="https://echo.htmlacademy.ru">
         <fieldset class="order__fieldset">
           <legend class="order__field-title">Тип</legend>
@@ -86,32 +88,32 @@
         <fieldset class="order__fieldset">
           <legend class="order__field-title">ФИО</legend>
           <div class="order__field">
-            <label class="order__label" for="name-field">Имя:</label>
+            <label class="order__field-label" for="name-field">Имя:</label>
             <input class="order__input" id="name-field" type="text" name="name" value="" placeholder="Введите ваше имя">
           </div>
           <div class="order__field">
-            <label class="order__label" for="last-name-field">Фамилия:</label>
+            <label class="order__field-label" for="last-name-field">Фамилия:</label>
             <input class="order__input" id="last-name-field" type="text" name="last-name" value="" placeholder="Укажите фамилию">
           </div>
           <div class="order__field">
-            <label class="order__label" for="patronymic-field">Отчество:</label>
+            <label class="order__field-label" for="patronymic-field">Отчество:</label>
             <input class="order__input" id="patronymic-field" type="text" name="patronymic" value="" placeholder="Отчество, если желаете">
           </div>
         </fieldset>
         <fieldset class="order__fieldset">
-          <legend class="order__fildtitle">Тел</legend>
+          <legend class="order__field-title">Тел</legend>
           <div class="order__field">
             <input class="order__input order__input--phone" type="tel" name="phone-number" value="" placeholder="+7 ХХХ ХХХ ХХ ХХ">
           </div>
         </fieldset>
         <fieldset class="order__fieldset">
-          <legend class="order__filed-title">E-mail</legend>
+          <legend class="order__field-title">E-mail</legend>
           <div class="order__field">
             <input class="order__input order__input--email" type="email" name="email" value="" placeholder="Ваш Email">
           </div>
         </fieldset>
         <fieldset class="order__fieldset">
-          <legend class="order__filed-title">Доп</legend>
+          <legend class="order__field-title">Доп</legend>
           <div class="order__field">
             <label class="visually-hidden" for="comment-field">Дополнительная информация:</label>
             <textarea class="order__comment id=" comment-field" name="comment" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
@@ -120,6 +122,7 @@
         <p class="order__required"><sup>*</sup> Поля обязательны для заполнения</p>
         <button class="order__button button" type="submit">Отправить заказ</button>
       </form>
+    </div>
     </section>
   </main>
   <footer class="page-footer">

@@ -1,0 +1,21 @@
+.form-header {
+  @include page-header;
+
+  margin-bottom: 23px;
+  padding: 70px 10px;
+
+  background-color: $bg-grey;
+
+  text-align: center;
+}
+
+.form-header__text {
+  margin: 0;
+  margin-left: 30px;
+  padding-right: 45px;
+
+  font-size: $txt-size - 2px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $txt-color;
+}

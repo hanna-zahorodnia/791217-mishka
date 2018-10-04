@@ -1,0 +1,33 @@
+$border-color: $txt-color;
+$bg-action: $border-color;
+$txt-color-action: $bg-color;
+
+.button {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+
+  padding: 12px 78px;
+
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $txt-color;
+
+  vertical-align: middle;
+  border: 2px solid $border-color;
+
+  background-color: $bg-color;
+
+  &:hover {
+    color: $txt-color-action;
+    background-color: $bg-action;
+  }
+
+  &:active {
+    color: rgba($color: $txt-color-action, $alpha: 0.3);
+  }
+}
+
+
