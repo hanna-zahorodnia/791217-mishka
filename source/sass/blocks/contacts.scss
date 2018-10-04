@@ -1,0 +1,33 @@
+.contacts {
+  background: rgba(234, 255, 45, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+}
+
+.contacts__wrapper {
+  @include wrapper;
+
+  padding-top: 38px;
+  padding-bottom: 55px;
+}
+
+.contacts__title {
+  @include section-header;
+
+  margin-bottom: 26px;
+
+  font-size: 18px;
+}
+
+.contacts__item {
+  @include description;
+
+  margin-bottom: 30px;
+
+  &--email {
+    color: $txt-color;
+  }
+}
+
+.contacts__map {
+  @include display (block, 55px);
+}

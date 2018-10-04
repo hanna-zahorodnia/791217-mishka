@@ -1,0 +1,9 @@
+.catalog-header {
+  @include page-header;
+
+  padding: 70px 10px;
+
+  background-color: $bg-grey;
+
+  text-align: center;
+}

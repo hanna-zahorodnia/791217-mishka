@@ -1,0 +1,9 @@
+.copyright {
+  background: rgba(0, 128, 0, 0.2);
+  box-shadow: inset 0 0 0 2px green;
+}
+
+.copyright__text {
+  font-size: $primary-font-size + 2px;
+  line-height: $primary-font-size + 1px;
+}

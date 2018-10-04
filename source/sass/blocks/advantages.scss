@@ -1,0 +1,23 @@
+.advantages {
+  background: rgba(234, 255, 45, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+}
+
+.advantages__wrapper {
+  @include wrapper;
+
+  padding-top: 30px;
+}
+
+.advantages__title {
+  @include section-header;
+  @include display (block, 30px);
+}
+
+.advantages__list {
+  @include list-reset;
+}
+
+.advantages__item {
+  padding-top: 57px;
+}

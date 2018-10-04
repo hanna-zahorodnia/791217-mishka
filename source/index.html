@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -16,18 +17,18 @@
       <div class="main-navigation__wrapper">
         <ul class="main-navigation__list site-list">
           <li class="site-list__item">
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Вязание на заказ</a>
+            <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
         <ul class="main-navigation__list user-list">
           <li class="user-list__item user-list__item--search">
-            <a href="#">Поиск по сайту</a>
+            <a class="user-list__link" href="#">Поиск по сайту</a>
           </li>
           <li class="user-list__item user-list__item--cart">
-            <a href="#">Корзина:
+            <a class="user-list__link" href="#">Корзина:
               <span>пока пуста</span>
             </a>
           </li>
@@ -38,42 +39,47 @@
   <main class="page-main">
     <h1 class="visually-hidden">Магазин игрушек Мишка</h1>
     <section class="intro">
+      <div class="intro__wrapper">
       <h2 class="intro__header">Милые штуки ручной работы для дома</h2>
       <ul class="intro__list">
         <li class="intro__item intro__item--interior">
-          <a class="intro__title" href="#">
-            <h2>Предметы интерьера</h2>
+          <a class="intro__title-link" href="#">
+            <h2 class="intro__title">Предметы интерьера</h2>
           </a>
         </li>
         <li class="intro__item intro__item--toys">
-          <a class="intro__title" href="#">
-            <h2>Детские игрушки</h2>
+          <a class="intro__title-link" href="#">
+            <h2 class="intro__title">Детские игрушки</h2>
           </a>
         </li>
       </ul>
+    </div>
     </section>
     <section class="weekly-hit">
-      <h2 class="weekly-hit__header">Вязаные корзинки</h2>
-      <b class="weekly-hit__label">Товар недели</b>
-      <p class="weekly-hit__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех
-        размерах.</p>
-      <table class="weekly-hit__characteristics">
-        <tr>
-          <th class="weekly-hit__property" scope="row">Цвет:</th>
-          <td class="weekly-hit__value">«Тиффани»/серый</td>
-        </tr>
-        <tr>
-          <th class="weekly-hit__property" scope="row">Диаметр:</th>
-          <td class="weekly-hit__value">25 см</td>
-        </tr>
-        <tr>
-          <th class="weekly-hit__property" scope="row">Высота:</th>
-          <td class="weekly-hit__value">15 см</td>
-        </tr>
-      </table>
-      <img class="weekly-hit__image" src="http://placehold.it/150x100" width="260" height="315" alt="Вязаные корзинки">
-      <b class="weekly-hit__price">Цена: 990 руб.</b>
-      <a class="weekly-hit__order button" href="#">Заказать</a>
+      <div class="weekly-hit__wrapper">
+        <h2 class="weekly-hit__header">Вязаные корзинки</h2>
+        <b class="weekly-hit__label">Товар недели</b>
+        <p class="weekly-hit__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и
+          трех
+          размерах.</p>
+        <table class="weekly-hit__characteristics">
+          <tr>
+            <th class="weekly-hit__property" scope="row">Цвет:</th>
+            <td class="weekly-hit__value">«Тиффани»/серый</td>
+          </tr>
+          <tr>
+            <th class="weekly-hit__property" scope="row">Диаметр:</th>
+            <td class="weekly-hit__value">25 см</td>
+          </tr>
+          <tr>
+            <th class="weekly-hit__property" scope="row">Высота:</th>
+            <td class="weekly-hit__value">15 см</td>
+          </tr>
+        </table>
+        <img class="weekly-hit__image" src="http://placehold.it/150x100" width="260" height="315" alt="Вязаные корзинки">
+        <b class="weekly-hit__price">Цена: 990 руб.</b>
+        <a class="weekly-hit__order button" href="#">Заказать</a>
+      </div>
     </section>
     <section class="advantages">
       <div class="advantages__wrapper">
@@ -102,8 +108,10 @@
           </blockquote>
         </div>
         <div class="reviews__buttons">
-          <button class="reviews__button reviews__button--prev" type="button">Предыдущий отзыв</button>
-          <button class="reviews__button reviews__button--next" type="button">Следующий отзыв</button>
+          <button class="reviews__button reviews__button--prev" type="button"><span class="visually-hidden">Предыдущий
+              отзыв</span></button>
+          <button class="reviews__button reviews__button--next" type="button"><span class="visually-hidden">Следующий
+              отзыв</span></button>
         </div>
         <a class="reviews__write-review button" href="#">Написать</a>
       </div>
@@ -111,7 +119,7 @@
     <section class="contacts">
       <div class="contacts__wrapper">
         <h2 class="contacts__title">Контакты</h2>
-        <p class="contacts__item">e-mail: <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></p>
+        <p class="contacts__item contacts__item--email">e-mail: <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></p>
         <p class="contacts__item">адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
         <img class="contacts__map" src="http://placehold.it/150x100" width="322" height="457" alt="Координаты магазина Мишка на карте Санкт-Петербурга">
         <a class="contacts__write-us button" href="#">Напишите нам</a>
@@ -123,7 +131,8 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="#">Инстаграм</a>
+            <a class="social__link social__link--instagram" href="#">Инстаграм
+              </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" href="#">Фейсбук</a>

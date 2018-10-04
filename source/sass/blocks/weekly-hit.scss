@@ -1,0 +1,66 @@
+.weekly-hit {
+  background: rgba(234, 255, 45, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+}
+
+.weekly-hit__wrapper {
+  @include wrapper;
+
+  padding-top: 27px;
+  padding-bottom: 55px;
+}
+
+.weekly-hit__header {
+  @include section-header;
+
+  margin-bottom: 5px;
+}
+
+.weekly-hit__label {
+  @include display (block, 23px);
+
+  color: $mint-light;
+
+  text-transform: uppercase;
+}
+
+.weekly-hit__description {
+  @include description;
+
+  line-height: 24px;
+}
+
+.weekly-hit__characteristics {
+  @include description;
+
+  line-height: 20px;
+}
+
+.weekly-hit__characteristics .weekly-hit__property {
+  font-weight: 400;
+}
+
+.weekly-hit__property {
+  padding: 9px 27px 9px 0;
+
+  text-align: left;
+}
+
+.weekly-hit__value {
+  padding-right: 10px;
+}
+
+.weekly-hit__image {
+  @include display (block, 23px);
+}
+
+.weekly-hit__price {
+  @include display (block, 42px);
+
+  padding: 0 20px;
+
+  line-height: 24px;
+  color: $txt-color;
+
+  text-align: center;
+}

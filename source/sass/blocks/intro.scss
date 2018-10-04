@@ -1,0 +1,51 @@
+$items-color: $bg-color;
+
+.intro {
+  //background-color: #fafafa;
+  background: rgba(0, 128, 0, 0.2);
+  box-shadow: inset 0 0 0 2px green;
+  background-image: url("../../img/hero-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 -20px;
+}
+
+.intro__header {
+  @include page-header;
+
+  padding: 70px 20px 182px;
+}
+
+.weekly-hit__label {
+  color: $mint-light;
+
+  text-transform: uppercase;
+}
+
+.intro__list {
+  @include list-reset;
+}
+
+.intro__item {
+  &--interior {
+    background-color: $mint-light;
+  }
+
+  &--toys {
+    background-color: #56c3b2;
+  }
+}
+
+.intro__title {
+  margin: 0;
+  line-height: 24px;
+
+  font-size: 19px;
+  color: $items-color;
+}
+
+.intro__title-link {
+  display: block;
+
+  margin: 0;
+  padding: 25px 28px;
+}

@@ -1,0 +1,37 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin description {
+  font-size: $txt-size;
+  font-weight: 400;
+  line-height: 30px;
+  color: $txt-color;
+}
+
+@mixin page-header {
+  margin: 0;
+
+  font-size: 27px;
+  line-height: 30px;
+}
+
+@mixin section-header {
+  margin: 0;
+
+  font-size: $txt-size + 10px;
+  line-height: 30px;
+}
+
+@mixin wrapper {
+  margin: 0 auto;
+  padding: 0 30px 0;
+}
+
+@mixin display ($disp, $b-margin) {
+  display: $disp;
+  margin-bottom: $b-margin;
+}

@@ -1,0 +1,65 @@
+.order__wrapper {
+  @include wrapper;
+
+  padding-top: 25px;
+  padding-bottom: 58px;
+}
+
+.order__fieldset {
+  padding: 0;
+  margin-bottom: 23px;
+
+  border: 0;
+
+  &:last-of-type {
+    margin-bottom: 14px;
+  }
+}
+
+.order__field-title {
+  margin-bottom: 33px;
+
+  line-height: 16px;
+  color: $mint-light;
+
+  text-transform: uppercase;
+}
+
+.order__type-item {
+  margin-bottom: 20px;
+}
+
+.order__color-item {
+  margin-bottom: 41px;
+}
+
+.order__label {
+  padding-left: 62px;
+
+  line-height: 18px;
+}
+
+.order__fireld-label {
+  line-height: 18px;
+}
+
+.order__type-list {
+  @include list-reset;
+}
+
+.order__color-list {
+  @include list-reset;
+}
+
+.order__required {
+  margin: 0;
+  margin-bottom: 30px;
+
+  font-size: $txt-size - 1px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.order__button {
+  padding: 12px 40px;
+}

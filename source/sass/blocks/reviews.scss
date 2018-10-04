@@ -1,0 +1,52 @@
+.reviews {
+  background: rgba(234, 255, 45, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+}
+
+.reviews__wrapper {
+  @include wrapper;
+
+  padding-top: 55px;
+  padding-bottom: 64px;
+}
+
+.reviews__title {
+  @include section-header;
+
+  margin-bottom: 25px;
+}
+
+.reviews__item {
+  margin: 0;
+}
+
+.reviews__author {
+  @include display (block, 2px);
+
+  line-height: 24px;
+  font-style: normal;
+}
+
+.reviews__nickname {
+  @include description;
+}
+
+.reviews__details {
+  @include description;
+}
+
+.reviews__buttons {
+  margin-bottom: 52px;
+}
+
+.reviews__button {
+  width: 130px;
+  height: 52px;
+
+  padding: 0;
+
+  vertical-align: middle;
+
+  background-color: $bg-color;
+  border: 1px solid #ececec;
+}

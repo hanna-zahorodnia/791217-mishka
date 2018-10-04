@@ -1,0 +1,19 @@
+.user-list {
+  @include list-reset;
+
+  background: rgba(0, 128, 0, 0.2);
+  box-shadow: inset 0 0 0 2px green;
+}
+
+.user-list__link {
+  color: $primary-color;
+  line-height: 24px;
+
+  &:hover {
+    color: rgba($primary-color, $alpha: 0.6);
+  }
+
+  &:active {
+    color: rgba($primary-color, $alpha: 0.3);
+  }
+}
