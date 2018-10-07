@@ -1,13 +1,8 @@
-.weekly-hit {
-  background: rgba(234, 255, 45, 0.2);
-  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
-}
-
 .weekly-hit__wrapper {
   @include wrapper;
 
   padding-top: 27px;
-  padding-bottom: 55px;
+  padding-bottom: 40px;
 }
 
 .weekly-hit__header {
@@ -24,8 +19,21 @@
   text-transform: uppercase;
 }
 
+.weekly-hit__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.weekly-hit__image {
+  @include display (block, 24px);
+}
+
 .weekly-hit__description {
   @include description;
+
+  order: -1;
+
+  margin-bottom: 18px;
 
   line-height: 24px;
 }
@@ -33,34 +41,160 @@
 .weekly-hit__characteristics {
   @include description;
 
-  line-height: 20px;
-}
+  width: 100%;
+  order: -1;
 
-.weekly-hit__characteristics .weekly-hit__property {
-  font-weight: 400;
+  margin-bottom: 28px;
+
+  line-height: 20px;
+
+  border-collapse: collapse;
 }
 
 .weekly-hit__property {
-  padding: 9px 27px 9px 0;
+  padding: 9px 13px 10px 0;
 
+  font-weight: 400;
   text-align: left;
+
+  border-bottom: $border;
 }
 
 .weekly-hit__value {
-  padding-right: 10px;
-}
-
-.weekly-hit__image {
-  @include display (block, 23px);
+  border-bottom: $border;
 }
 
 .weekly-hit__price {
-  @include display (block, 42px);
-
+  margin-bottom: 26px;
   padding: 0 20px;
 
   line-height: 24px;
   color: $txt-color;
 
   text-align: center;
+}
+
+.weekly-hit__order {
+  padding: 14px 80px;
+}
+
+// Styles for tablet version
+
+@media (min-width: $tablet-width) {
+  .weekly-hit__wrapper {
+    @include wrapper-tablet;
+
+    position: relative;
+
+    padding-top: 45px;
+    padding-bottom: 70px;
+  }
+
+  .weekly-hit__header-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+
+    margin-bottom: 32px;
+  }
+
+  .weekly-hit__header {
+    @include section-header-tb;
+  }
+
+  .weekly-hit__label {
+    flex-basis: 125px;
+    margin-left: auto;
+    margin-top: 11px;
+
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .weekly-hit__image {
+    position: absolute;
+    top: 152px;
+
+    align-self: flex-end;
+  }
+
+  .weekly-hit__description {
+    width: 291px;
+
+    margin-bottom: 35px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .weekly-hit__characteristics {
+    width: 291px;
+
+    margin-bottom: 56px;
+  }
+
+  .weekly-hit__property {
+    padding: 9px 0 10px 0;
+  }
+
+  .weekly-hit__price {
+    width: 291px;
+    box-sizing: border-box;
+
+    margin-bottom: 34px;
+
+    font-size: 20px;
+  }
+
+  .weekly-hit__order {
+    width: 291px;
+    box-sizing: border-box;
+
+    padding: 14px 80px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .weekly-hit__wrapper {
+    @include wrapper-desktop;
+
+    padding-top: 72px;
+    padding-bottom: 100px;
+  }
+
+  .weekly-hit__header-wrapper {
+    margin-top: 52px;
+    margin-bottom: 45px;
+    padding-left: 20px;
+    padding-right: 300px;
+  }
+
+  .weekly-hit__header {
+    @include section-header-desktop;
+
+    order: 1;
+  }
+
+  .weekly-hit__label {
+    margin: 15px 25px 0 0;
+  }
+
+  .weekly-hit__container {
+    padding-left: 175px;
+  }
+
+  .weekly-hit__description {
+    margin-bottom: 49px;
+  }
+
+  .weekly-hit__image {
+    top: 72px;
+  }
+
+  .weekly-hit__property {
+    padding: 8px 0 11px 0;
+  }
+
+  .weekly-hit__characteristics {
+    margin-bottom: 108px;
+  }
 }

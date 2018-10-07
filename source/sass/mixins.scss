@@ -6,10 +6,17 @@
 }
 
 @mixin description {
+  margin: 0;
+
   font-size: $txt-size;
   font-weight: 400;
   line-height: 30px;
   color: $txt-color;
+}
+
+@mixin description-tb {
+  font-size: 17px;
+  line-height: 30px;
 }
 
 @mixin page-header {
@@ -26,9 +33,31 @@
   line-height: 30px;
 }
 
+@mixin section-header-tb {
+  font-size: 43px;
+  line-height: 50px;
+}
+
+@mixin section-header-desktop {
+  font-size: 53px;
+  line-height: 57px;
+}
+
 @mixin wrapper {
   margin: 0 auto;
   padding: 0 30px 0;
+}
+
+@mixin wrapper-tablet {
+  margin: 0 auto;
+  padding: 0 50px 0;
+}
+
+@mixin wrapper-desktop {
+  width: 1200px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 75px 0;
 }
 
 @mixin display ($disp, $b-margin) {

@@ -1,9 +1,39 @@
 .catalog-header {
-  @include page-header;
 
-  padding: 70px 10px;
+  padding: 70px 10px 76px;
 
   background-color: $bg-grey;
+}
+
+.catalog-header__title {
+  @include page-header;
+
+  padding-right: 20px;
+  padding-left: 20px;
 
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-header {
+    padding-top: 95px;
+  }
+
+  .catalog-header__title {
+    @include section-header-tb;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-header {
+    padding-top: 93px;
+    padding-bottom: 100px;
+  }
+
+  .catalog-header__title {
+    @include section-header-desktop;
+
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }

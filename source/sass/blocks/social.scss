@@ -1,8 +1,33 @@
 .social {
-  background: rgba(0, 128, 0, 0.2);
-  box-shadow: inset 0 0 0 2px green;
+  margin-bottom: 26px;
 }
 
 .social__list {
   @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 141px;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  text-align: center;
+}
+
+.social__link {
+  align-items: center;
+
+  display: flex;
+  justify-content: center;
+  width: 25px;
+  height: 28px;
+}
+
+@media (min-width: $tablet-width) {
+  .social {
+    margin: 10px 0 0 75px;
+  }
 }
