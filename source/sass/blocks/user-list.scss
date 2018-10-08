@@ -52,3 +52,9 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .user-list {
+    margin-left: auto;
+  }
+}

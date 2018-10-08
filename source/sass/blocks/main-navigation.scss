@@ -7,3 +7,14 @@
     margin-left: auto;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .main-navigation {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .main-navigation__wrapper {
+    display: flex;
+  }
+}

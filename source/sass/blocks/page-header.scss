@@ -49,4 +49,17 @@
     padding-top: 19px;
     padding-bottom: 19px;
   }
+
+  .page-header__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin-right: 0;
+  }
+
+  .page-header__logo-image {
+    width: 149px;
+    height: 72px;
+  }
 }
