@@ -1,8 +1,40 @@
 .page-footer {
   background-color: $bg-grey;
-  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
 }
 
 .page-footer__wrapper {
   @include wrapper;
+
+  padding-top: 26px;
+  padding-bottom: 30px;
+}
+
+.page-footer__logo-image {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__wrapper {
+    @include wrapper-tablet;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 34px;
+    padding-bottom: 41px;
+  }
+
+  .page-footer__logo-image {
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__wrapper {
+    @include wrapper-desktop;
+
+    padding-top: 34px;
+    padding-bottom: 41px;
+  }
 }

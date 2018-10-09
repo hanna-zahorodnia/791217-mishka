@@ -1,8 +1,65 @@
-.page-header {
-  background-color: $bg-color;
+.page-header__wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .page-header__logo {
   display: block;
   text-align: center;
+
+  // Временно, пока не вставлены изображения
+  height: 79px;
+  width: 113px;
+}
+
+.page-header__logo-image {
+  width: 86px;
+  height: 35px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__wrapper {
+    @include wrapper-tablet;
+
+    flex-direction: row;
+    position: relative;
+
+    padding-top: 19px;
+    padding-bottom: 19px;
+
+    border-bottom: $border;
+  }
+
+  .page-header__logo {
+    height: auto;
+
+    margin-right: 210px;
+  }
+
+  .page-header__logo-image {
+    width: 113px;
+    height: 46px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__wrapper {
+    @include wrapper-desktop;
+
+    padding-top: 19px;
+    padding-bottom: 19px;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin-right: 0;
+  }
+
+  .page-header__logo-image {
+    width: 149px;
+    height: 72px;
+  }
 }
