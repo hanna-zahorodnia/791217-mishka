@@ -8,12 +8,13 @@
 .site-list__item {
   width: 100%;
 
-  padding: 27px 30px 27px 76px;
-
   border-bottom: $border;
 }
 
 .site-list__link {
+  display: block;
+  padding: 27px 30px 27px 76px;
+
   color: $primary-color;
   line-height: 24px;
 
@@ -35,9 +36,9 @@
     display: flex;
     flex-wrap: nowrap;
     position: absolute;
-    top: 106px;
+    top: 105px;
     left: 49px;
-    width: 334px;
+    width: 336px;
   }
 
   .site-list__item {
@@ -47,6 +48,8 @@
   }
 
   .site-list__link {
+    padding: 0;
+
     font-size: 15px;
   }
 }
@@ -69,7 +72,7 @@
 
 
     position: absolute;
-    top: 106px;
+    top: 105px;
   }
 
   .site-list__extra-link {
@@ -79,5 +82,13 @@
     line-height: 24px;
 
     color: #000000;
+
+    &:hover {
+      color: rgba($primary-color, $alpha: 0.6);
+    }
+
+    &:active {
+      color: rgba($primary-color, $alpha: 0.3);
+    }
   }
 }
