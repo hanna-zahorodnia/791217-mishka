@@ -11,8 +11,7 @@
   align-items: center;
   width: 141px;
 
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
 
   text-align: center;
 }
@@ -28,6 +27,21 @@
 
 @media (min-width: $tablet-width) {
   .social {
-    margin: 10px 0 0 75px;
+    margin: 15px auto 5px 83px;
+  }
+
+  .social__link-icon {
+    fill: #231f20;
+  }
+
+  .social__link {
+    &:hover .social__link-icon {
+      fill: #46c1ae;
+    }
+
+    &:active .social__link-icon {
+      fill: #46c1ae;
+      opacity: 0.3;
+    }
   }
 }

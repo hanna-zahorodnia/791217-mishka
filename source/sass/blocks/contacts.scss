@@ -2,7 +2,7 @@
   @include wrapper;
 
   margin-bottom: 36px;
-  padding-top: 39px;
+  padding-top: 35px;
 }
 
 .contacts__title {
@@ -44,6 +44,9 @@
 
 .contacts__map {
   @include display (block, 54px);
+
+  width: 322px;
+  height: 457px;
 }
 
 .contacts__bottom-wrapper {
@@ -69,7 +72,23 @@
   .contacts__title {
     @include section-header-tb;
 
+    position: relative;
+
     margin-bottom: 49px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: -30%;
+      left: 618px;
+      width: 47px;
+      height: 81px;
+
+      background-color: transparent;
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+    }
   }
 
   .contacts__list {
@@ -86,14 +105,29 @@
     &:first-of-type {
       margin-bottom: auto;
     }
-
-    &:last-of-type {
-      margin-left: 28px;
-    }
   }
 
   .contacts__item-property {
     margin-right: 23px;
+  }
+
+  .contacts__item-details {
+    &--email:hover {
+      color: #46c1ae;
+    }
+
+    &--email:active {
+      color: #46c1ae;
+
+      opacity: 0.3;
+    }
+  }
+
+  .contacts__map {
+    width: 768px;
+    height: 457px;
+
+    margin-bottom: 56px;
   }
 
   .contacts__bottom-wrapper {
@@ -129,6 +163,11 @@
 
     margin-bottom: 49px;
     padding-right: 550px;
+
+    &::after {
+      top: -15%;
+      left: -111px;
+    }
   }
 
   .contacts__list {
@@ -154,13 +193,14 @@
     position: absolute;
     top: 70px;
     right: 0;
+    width: 525px;
 
     margin-bottom: 0;
   }
 
   .contacts__bottom-wrapper {
     padding-bottom: 105px;
-    padding-left: 175px;
+    padding-left: 176px;
   }
 
   .contacts__write-us {

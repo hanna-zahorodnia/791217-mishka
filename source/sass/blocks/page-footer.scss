@@ -5,6 +5,9 @@
 .page-footer__wrapper {
   @include wrapper;
 
+  display: flex;
+  flex-direction: column;
+
   padding-top: 26px;
   padding-bottom: 30px;
 }
@@ -17,12 +20,25 @@
   .page-footer__wrapper {
     @include wrapper-tablet;
 
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    padding-top: 34px;
-    padding-bottom: 41px;
+    padding-top: 36px;
+    padding-bottom: 46px;
+  }
+
+  .page-footer__logo {
+    margin-right: auto;
+
+    &:hover .page-footer__logo-image {
+      fill: #46c1ae;
+    }
+
+    &:active .page-footer__logo-image {
+      fill: #46c1ae;
+      opacity: 0.3;
+    }
   }
 
   .page-footer__logo-image {
@@ -34,7 +50,7 @@
   .page-footer__wrapper {
     @include wrapper-desktop;
 
-    padding-top: 34px;
-    padding-bottom: 41px;
+    padding-top: 36px;
+    padding-bottom: 45px;
   }
 }

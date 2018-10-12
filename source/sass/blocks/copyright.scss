@@ -1,25 +1,44 @@
 .copyright {
   display: flex;
   justify-content: space-between;
-  width: 182px;
+  align-items: center;
 
-  margin-left: auto;
-  margin-right: auto;
-  padding: 27px 39px 0;
+  margin: 0 auto;
+  padding: 13px 38px 0;
 
   border-top: 1px solid #e5e5e5;
 }
 
 .copyright__text {
+  margin-right: 21px;
+
   font-size: $primary-font-size + 2px;
   line-height: $primary-font-size + 1px;
 }
 
+.copyright__image {
+  fill: #63d1bb;
+
+  margin-top: 5px;
+}
+
 @media (min-width: $tablet-width) {
   .copyright {
-    margin: 12px 0 0 0;
+    margin: 10px 0 0 0;
     padding: 0;
 
     border: none;
+  }
+
+
+  .copyright__link {
+    &:hover .copyright__image {
+      fill: #46c1ae;
+    }
+
+    &:active .copyright__image {
+      fill: #46c1ae;
+      opacity: 0.3;
+    }
   }
 }

@@ -1,7 +1,7 @@
 .advantages__wrapper {
   @include wrapper;
 
-  padding-top: 31px;
+  padding-top: 28px;
   padding-bottom: 10px;
 }
 
@@ -17,8 +17,71 @@
 }
 
 .advantages__item {
+  position: relative;
   margin-bottom: 23px;
   padding-top: 60px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    bottom: 57%;
+    left: 3%;
+    width: 32px;
+    height: 37px;
+
+    background-color: transparent;
+    background-repeat: no-repeat;
+  }
+
+  &--eco::before {
+    background-image: url("../img/icon-feature-flower.svg");
+  }
+
+  &--scandic::before {
+    bottom: 66%;
+    left: 0;
+    width: 47px;
+    height: 27px;
+
+    background-image: url("../img/icon-feature-money.svg");
+  }
+
+  &--likes::before {
+    bottom: 61%;
+    left: 3%;
+    width: 34px;
+    height: 28px;
+
+    background-image: url("../img/icon-feature-heart.svg");
+  }
+
+  &--handmade::before {
+    bottom: 57%;
+    left: 1%;
+    width: 35px;
+    height: 34px;
+
+    background-image: url("../img/icon-feature-ball.svg");
+  }
+
+  &--domestic::before {
+    bottom: 67%;
+    left: -2%;
+    width: 55px;
+    height: 23px;
+
+    background-image: url("../img/icon-feature-rocket.svg");
+  }
+
+  &--present::before {
+    bottom: 60%;
+    left: 1%;
+    width: 33px;
+    height: 32px;
+
+    background-image: url("../img/icon-feature-gift.svg");
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -62,7 +125,7 @@
     width: 700px;
 
     margin: 0 auto;
-    padding: 55px 250px 39px;
+    padding: 55px 0 39px;
   }
 
   .advantages__title {

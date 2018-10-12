@@ -39,6 +39,7 @@
     top: 105px;
     left: 49px;
     width: 336px;
+    z-index: 1;
   }
 
   .site-list__item {
@@ -63,16 +64,27 @@
     margin-right: auto;
   }
 
+  .site-list__item {
+    &:first-of-type {
+      border-right: $border;
+    }
+  }
+
   .site-list__link {
+    padding: 31px 0;
+
     font-size: 17px;
+
+    &--knitting {
+      padding-left: 30px;
+    }
   }
 
   .site-list__extra-list {
-    display: flex;
-
-
     position: absolute;
     top: 105px;
+    z-index: 1;
+    display: flex;
   }
 
   .site-list__extra-link {

@@ -1,8 +1,23 @@
 .weekly-hit__wrapper {
   @include wrapper;
 
+  position: relative;
+
   padding-top: 27px;
   padding-bottom: 40px;
+}
+
+.weekly-hit__wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  background-size: contain;
+  width: 100%;
+  height: 6px;
 }
 
 .weekly-hit__header {
@@ -26,6 +41,9 @@
 
 .weekly-hit__image {
   @include display (block, 24px);
+
+  width: 260px;
+  height: 315px;
 }
 
 .weekly-hit__description {
@@ -86,8 +104,14 @@
 
     position: relative;
 
-    padding-top: 45px;
+    padding-top: 44px;
     padding-bottom: 70px;
+  }
+
+  .weekly-hit__wrapper::after {
+    height: 19px;
+
+    background-size: cover;
   }
 
   .weekly-hit__header-wrapper {
@@ -113,6 +137,9 @@
   .weekly-hit__image {
     position: absolute;
     top: 152px;
+
+    width: 333px;
+    height: 404px;
 
     align-self: flex-end;
   }
@@ -161,8 +188,18 @@
     padding-bottom: 100px;
   }
 
+  .weekly-hit__wrapper::after {
+    left: auto;
+    width: 1050px;
+    height: 25px;
+
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: cover;
+  }
+
   .weekly-hit__header-wrapper {
-    margin-top: 52px;
+    margin-top: 50px;
     margin-bottom: 45px;
     padding-left: 20px;
     padding-right: 300px;
@@ -172,6 +209,7 @@
     @include section-header-desktop;
 
     order: 1;
+    z-index: 1;
   }
 
   .weekly-hit__label {
@@ -188,6 +226,9 @@
 
   .weekly-hit__image {
     top: 72px;
+
+    width: 525px;
+    height: 636px;
   }
 
   .weekly-hit__property {
