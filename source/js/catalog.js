@@ -1,5 +1,4 @@
-// Открытие/закрытие мобильного меню
-
+'use strict';
 var navMain = document.querySelector('.main-navigation');
 var navToggle = document.querySelector('.main-navigation__toggle');
 
@@ -15,22 +14,13 @@ navToggle.addEventListener('click', function() {
   }
 });
 
-//Открытие/закрытие модального окна
-
-var orderLink = document.querySelector(".weekly-hit__order");
+var cartIcons = document.querySelectorAll(".catalog__add-to-cart");
 var cartPopup = document.querySelector(".modal");
-var cartForm = cartPopup.querySelector("form");
-var body = document.querySelector('body');
+var body = document.querySelector("body");
 
-orderLink.addEventListener("click", function (evt) {
-  evt.preventDefault();
+var showPopup = function () {
   cartPopup.classList.add("modal--show");
-  evt.stopPropagation();
-});
-
-cartForm.addEventListener("submit", function (evt) {
-  evt.preventDefault();
-});
+}
 
 var closePopup = function () {
   cartPopup.classList.remove('modal--show');
@@ -43,3 +33,10 @@ document.addEventListener('click', function (evt) {
   }
 });
 
+for (var i = 0; i < cartIcons.length; i++) {
+  var element = cartIcons[i];
+  element.addEventListener('click', function(evt) {
+    evt.stopPropagation();
+    showPopup();
+  });
+}

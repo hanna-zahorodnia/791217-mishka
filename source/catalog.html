@@ -219,29 +219,31 @@
     </div>
   </footer>
 
-  <section class="modal modal-cart">
-    <h1 class="modal-cart__title">Добавить в корзину</h1>
-    <form class="modal-cart__form modal-form" method="POST" action="https://echo.htmlacademy.ru">
-      <legend class="modal-form__text">Выберите размер:</legend>
-      <ul class="modal-form__list">
-        <li class="modal-form__item modal-form__item--checked">
-          <input type="checkbox" name="s" class="visually-hidden" id="s" checked>
-          <label for="s">S</label>
-        </li>
-        <li class="modal-form__item">
-          <input type="checkbox" name="m" class="visually-hidden" id="m">
-          <label for="m">M</label>
-        </li>
-        <li class="modal-form__item">
-          <input type="checkbox" name="l" class="visually-hidden" id="l">
-          <label for="l">L</label>
-        </li>
-      </ul>
-      <button class="modal-form__button button" type="submit">Добавить</button>
-    </form>
-  </section>
+  <section class="modal">
+      <div class="modal__wrapper">
+        <h1 class="modal__title">Добавить в&nbsp;корзину</h1>
+        <form class="modal__form modal-form" method="POST" action="https://echo.htmlacademy.ru">
+          <legend class="modal-form__text">Выберите размер:</legend>
+          <ul class="modal-form__list">
+            <li class="modal-form__item modal-form__item--checked">
+              <input class="visually-hidden modal-form__checkbox" type="checkbox" name="s" id="s" checked>
+              <label class="modal-form__item-size" for="s">S</label>
+            </li>
+            <li class="modal-form__item">
+              <input class="visually-hidden modal-form__checkbox" type="checkbox" name="m" id="m">
+              <label class="modal-form__item-size" for="m">M</label>
+            </li>
+            <li class="modal-form__item">
+              <input class="visually-hidden modal-form__checkbox" type="checkbox" name="l" id="l">
+              <label class="modal-form__item-size" for="l">L</label>
+            </li>
+          </ul>
+          <button class="modal-form__button button" type="submit">Добавить</button>
+        </form>
+      </div>
+    </section>
 
-  <script src="js/script.js"></script>
+  <script src="js/catalog.js"></script>
 
 </body>
 
