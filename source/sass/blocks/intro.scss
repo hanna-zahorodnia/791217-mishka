@@ -126,19 +126,6 @@ $items-color: $bg-color;
     margin-bottom: 485px;
   }
 
-  .intro__label {
-    position: absolute;
-    top: -136px;
-    right: 48px;
-
-    display: block;
-    margin: 0;
-
-    font-size: 15px;
-    line-height: 24px;
-    font-weight: 400;
-  }
-
   .intro__list {
     display: flex;
     flex-wrap: nowrap;
@@ -238,10 +225,6 @@ $items-color: $bg-color;
 
   .intro__container {
     @include wrapper-desktop;
-  }
-
-  .intro__label {
-    right: 76px;
   }
 
   .intro__header {

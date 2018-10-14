@@ -46,19 +46,6 @@
     position: relative;
   }
 
-  .catalog-header__label {
-    position: absolute;
-    top: -78px;
-    right: 39px;
-
-    display: block;
-    margin: 0;
-
-    font-size: 15px;
-    line-height: 24px;
-    font-weight: 400;
-  }
-
   .catalog-header__title {
     @include section-header-tb;
   }
@@ -77,11 +64,6 @@
 
   .catalog-header__wrapper {
     @include wrapper-desktop;
-  }
-
-  .catalog-header__label {
-    top: -75px;
-    right: 75px;
   }
 
   .catalog-header__title {

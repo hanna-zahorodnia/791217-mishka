@@ -1,6 +1,4 @@
 .reviews__wrapper {
-  @include wrapper;
-
   position: relative;
 
   padding-top: 23px;
@@ -106,7 +104,7 @@
 @media (min-width: $tablet-width) {
   .reviews {
     background-color: $bg-color;
-    background-image: url("../../img/review@1x.jpg");
+    background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
   }

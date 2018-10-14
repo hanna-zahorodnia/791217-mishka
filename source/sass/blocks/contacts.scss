@@ -1,6 +1,4 @@
 .contacts__wrapper {
-  @include wrapper;
-
   margin-bottom: 36px;
   padding-top: 35px;
 }
@@ -50,8 +48,6 @@
 }
 
 .contacts__bottom-wrapper {
-  @include wrapper;
-
   padding-bottom: 54px;
 }
 
