@@ -3,19 +3,11 @@
 
   padding-top: 27px;
   padding-bottom: 40px;
-}
 
-.weekly-hit__wrapper::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
   background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
-  background-position: 0 0;
+  background-position: bottom;
   background-size: contain;
-  width: 100%;
-  height: 6px;
 }
 
 .weekly-hit__header {
@@ -40,8 +32,8 @@
 .weekly-hit__image {
   @include display (block, 24px);
 
-  width: 260px;
-  height: 315px;
+  width: 100%;
+  height: auto;
 }
 
 .weekly-hit__description {
@@ -98,18 +90,10 @@
 
 @media (min-width: $tablet-width) {
   .weekly-hit__wrapper {
-    @include wrapper-tablet;
-
     position: relative;
 
     padding-top: 44px;
     padding-bottom: 70px;
-  }
-
-  .weekly-hit__wrapper::after {
-    height: 19px;
-
-    background-size: cover;
   }
 
   .weekly-hit__header-wrapper {
@@ -125,6 +109,7 @@
 
   .weekly-hit__label {
     flex-basis: 125px;
+
     margin-left: auto;
     margin-top: 11px;
 
@@ -180,20 +165,8 @@
 
 @media (min-width: $desktop-width) {
   .weekly-hit__wrapper {
-    @include wrapper-desktop;
-
     padding-top: 72px;
     padding-bottom: 100px;
-  }
-
-  .weekly-hit__wrapper::after {
-    left: auto;
-    width: 1050px;
-    height: 25px;
-
-    background-repeat: no-repeat;
-    background-position: 0 center;
-    background-size: cover;
   }
 
   .weekly-hit__header-wrapper {

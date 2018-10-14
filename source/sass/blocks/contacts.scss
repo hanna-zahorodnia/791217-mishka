@@ -49,6 +49,8 @@
 
 .contacts__bottom-wrapper {
   padding-bottom: 54px;
+
+  text-align: center;
 }
 
 .contacts__write-us {
@@ -59,8 +61,6 @@
 
 @media (min-width: $tablet-width) {
   .contacts__wrapper {
-    @include wrapper-tablet;
-
     margin-bottom: 56px;
     padding-top: 62px;
   }

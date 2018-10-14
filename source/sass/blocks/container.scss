@@ -2,3 +2,20 @@
   margin: 0 auto;
   padding: 0 30px 0;
 }
+
+@media (min-width: $tablet-width) {
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    width: 1200px;
+
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}
+

@@ -4,22 +4,23 @@
   align-items: center;
 
   margin: 0 auto;
-  padding: 13px 38px 0;
+  padding: 16px 38px 0;
+
+  font-size: $primary-font-size + 2px;
+  line-height: $primary-font-size + 1px;
+  color: #000000;
 
   border-top: 1px solid #e5e5e5;
 }
 
 .copyright__text {
   margin-right: 21px;
-
-  font-size: $primary-font-size + 2px;
-  line-height: $primary-font-size + 1px;
 }
 
 .copyright__image {
   fill: #63d1bb;
 
-  margin-top: 5px;
+  display: block;
 }
 
 @media (min-width: $tablet-width) {
@@ -28,10 +29,7 @@
     padding: 0;
 
     border: none;
-  }
 
-
-  .copyright__link {
     &:hover .copyright__image {
       fill: #46c1ae;
     }

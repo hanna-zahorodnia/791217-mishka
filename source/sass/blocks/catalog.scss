@@ -1,8 +1,6 @@
 $lh: 24px;
 
 .catalog__wrapper {
-  @include wrapper;
-
   padding-top: 29px;
 }
 
@@ -47,8 +45,7 @@ $lh: 24px;
 
 .catalog__image {
   display: block;
-  width: 260px;
-  height: 195px;
+  width: 100%;
 }
 
 .catalog__item-size {
@@ -97,8 +94,6 @@ $lh: 24px;
 
 @media (min-width: $tablet-width) {
   .catalog__wrapper {
-    @include wrapper-tablet;
-
     padding-top: 67px;
   }
 
@@ -166,8 +161,6 @@ $lh: 24px;
 
 @media (min-width: $desktop-width) {
   .catalog__wrapper {
-    @include wrapper-desktop;
-
     padding-top: 122px;
   }
 

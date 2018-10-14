@@ -84,8 +84,6 @@
 
 @media (min-width: $tablet-width) {
   .advantages__wrapper {
-    @include wrapper-tablet;
-
     padding-top: 48px;
     padding-bottom: 32px;
   }
