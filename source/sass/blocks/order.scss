@@ -305,7 +305,6 @@
     flex-wrap: nowrap;
     align-items: baseline;
 
-    padding: 0 50px 0;
     padding-bottom: 13px;
   }
 
@@ -330,7 +329,8 @@
     flex-wrap: nowrap;
     align-items: baseline;
 
-    padding: 66px 20px 11px 50px;
+    padding-top: 66px;
+    padding-bottom: 11px;
   }
 
   .order__checkbox + .order__label::before {
@@ -346,8 +346,6 @@
   }
 
   .order__personal-fieldset-container {
-    @include wrapper-tablet;
-
     display: flex;
     flex-wrap: nowrap;
     align-items: baseline;
@@ -357,8 +355,6 @@
   }
 
   .order__phone-fieldset-container {
-    @include wrapper-tablet;
-
     display: flex;
     flex-wrap: nowrap;
     align-items: baseline;
@@ -368,8 +364,6 @@
   }
 
   .order__email-fieldset-container {
-    @include wrapper-tablet;
-
     display: flex;
     flex-wrap: nowrap;
     align-items: baseline;
@@ -378,8 +372,6 @@
   }
 
   .order__comment-fieldset-container {
-    @include wrapper-tablet;
-
     display: flex;
     flex-wrap: nowrap;
     align-items: baseline;
@@ -403,10 +395,11 @@
   .order__color-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .order__color-item {
-    flex-basis: 261px;
+    flex-basis: 238px;
 
     padding-left: 81px;
     margin-bottom: 58px;
@@ -499,8 +492,6 @@
   }
 
   .order__bottom-wrapper {
-    @include wrapper-tablet;
-
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -513,20 +504,15 @@
 
 @media (min-width: $desktop-width) {
   .order__type-fieldset-container {
-    width: 1200px;
-    box-sizing: border-box;
-
-    margin: 0 auto;
     padding: 0 140px 12px;
   }
 
   .order__color-fieldset-container {
-    width: 1200px;
-    box-sizing: border-box;
+    padding: 66px 100px 11px 135px;
+  }
 
-    margin: 0 auto;
-
-    padding: 66px 100px 10px 135px;
+  .order__color-list {
+    justify-content: flex-start;
   }
 
   .order__color-item {
@@ -534,47 +520,22 @@
   }
 
   .order__personal-fieldset-container {
-    width: 1200px;
-    box-sizing: border-box;
-
-    margin: 0 auto;
-
-    padding: 60px 250px 17px 135px;
+    padding: 60px 250px 15px 135px;
   }
 
   .order__phone-fieldset-container {
-    width: 1200px;
-    box-sizing: border-box;
-
-    margin: 0 auto;
-
-    padding: 61px 250px 18px 135px;
+    padding: 62px 250px 18px 135px;
   }
 
   .order__email-fieldset-container {
-    width: 1200px;
-    box-sizing: border-box;
-
-    margin: 0 auto;
-
     padding: 0 250px 30px 135px;
   }
 
   .order__comment-fieldset-container {
-    width: 1200px;
-    box-sizing: border-box;
-
-    margin: 0 auto;
-
     padding: 50px 250px 28px 135px;
   }
 
   .order__bottom-wrapper {
-    width: 1200px;
-    box-sizing: border-box;
-
-    margin: 0 auto;
-
     padding: 0 250px;
   }
 

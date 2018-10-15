@@ -2,11 +2,6 @@
   border-bottom: $border;
 }
 
-.page-header__wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
 .page-header__logo {
   display: flex;
   justify-content: center;
@@ -34,11 +29,13 @@
   }
 
   .page-header__wrapper {
-    @include wrapper-tablet;
+    display: flex;
+
+    margin: 0 auto;
+    padding: 0 50px;
 
     height: 88px;
 
-    flex-direction: row;
     position: relative;
   }
 
@@ -75,12 +72,13 @@
 
   .page-header__label {
     position: absolute;
-    top: 105px;
+    top: 100%;
     right: 50px;
     z-index: 1;
 
     display: block;
     margin: 0;
+    padding: 18px 0;
 
     font-size: 15px;
     line-height: 24px;
@@ -94,7 +92,9 @@
   }
 
   .page-header__wrapper {
-    @include wrapper-desktop;
+    width: 1200px;
+    padding-left: 75px;
+    padding-right: 75px;
   }
 
   .page-header__logo {

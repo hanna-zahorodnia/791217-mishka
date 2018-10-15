@@ -55,8 +55,6 @@
     flex-wrap: nowrap;
     flex: 0 0 50%;
     align-items: center;
-
-    padding-left: 175px;
   }
 
   .user-list__item {
@@ -103,6 +101,6 @@
   .user-list {
     align-items: flex-start;
 
-    margin-left: auto;
+    padding-left: 175px;
   }
 }

@@ -10,19 +10,6 @@
   background-size: contain;
 }
 
-/*.reviews__wrapper::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-image: url("../img/bg-zigzag-line.svg");
-  background-repeat: repeat-x;
-  background-position: 0 0;
-  background-size: contain;
-  width: 100%;
-  height: 6px;
-}*/
-
 .reviews__title {
   @include section-header;
 
@@ -183,7 +170,9 @@
   }
 
   .reviews__wrapper {
-    padding: 70px 0 187px 174px;
+    width: 1050px;
+
+    padding: 70px 0 187px 175px;
   }
 
   .reviews__author {

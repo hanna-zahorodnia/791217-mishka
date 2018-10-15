@@ -60,10 +60,10 @@
     <p class="form-header__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
       свяжемся с вами, чтобы уточнить детали.</p>
     <section class="order">
-      <div class="order__wrapper container">
+      <div class="order__wrapper">
         <form class="order__form" method="POST" action="https://echo.htmlacademy.ru">
           <fieldset class="order__fieldset">
-            <div class="order__type-fieldset-container">
+            <div class="order__type-fieldset-container container">
               <legend class="order__field-title order__field-title--type">Тип</legend>
               <ul class="order__type-list">
                 <li class="order__type-item order__type-item--checked">
@@ -79,7 +79,7 @@
             </div>
           </fieldset>
           <fieldset class="order__fieldset order__fieldset--color">
-            <div class="order__color-fieldset-container">
+            <div class="order__color-fieldset-container container">
               <legend class="order__field-title order__field-title--color">Цвет</legend>
               <ul class="order__color-list">
                 <li class="order__color-item order__color-item--checked">
@@ -110,7 +110,7 @@
             </div>
           </fieldset>
           <fieldset class="order__fieldset order__fieldset--personal">
-            <div class="order__personal-fieldset-container">
+            <div class="order__personal-fieldset-container container">
               <legend class="order__field-title order__field-title--personal">ФИО</legend>
               <div class="order__personal-container">
                 <div class="order__field">
@@ -129,7 +129,7 @@
             </div>
           </fieldset>
           <fieldset class="order__fieldset order__fieldset--phone">
-            <div class="order__phone-fieldset-container">
+            <div class="order__phone-fieldset-container container">
               <legend class="order__field-title order__field-title--phone">Тел</legend>
               <div class="order__field">
                 <input class="order__input order__input--phone" type="tel" name="phone-number" value="" placeholder="+7 ХХХ ХХХ ХХ ХХ">
@@ -137,7 +137,7 @@
             </div>
           </fieldset>
           <fieldset class="order__fieldset order__fieldset--email">
-            <div class="order__email-fieldset-container">
+            <div class="order__email-fieldset-container container">
               <legend class="order__field-title order__field-title--email">E-mail</legend>
               <div class="order__field">
                 <input class="order__input order__input--email" type="email" name="email" value="" placeholder="Ваш Email">
@@ -145,7 +145,7 @@
             </div>
           </fieldset>
           <fieldset class="order__fieldset">
-            <div class="order__comment-fieldset-container">
+            <div class="order__comment-fieldset-container container">
               <legend class="order__field-title order__field-title--comment">Доп</legend>
               <div class="order__field order__field--comment">
                 <label class="visually-hidden" for="comment-field">Дополнительная информация:</label>
@@ -153,7 +153,7 @@
               </div>
             </div>
           </fieldset>
-          <div class="order__bottom-wrapper">
+          <div class="order__bottom-wrapper container">
             <p class="order__required"><sup>*</sup> Поля обязательны для заполнения</p>
             <button class="order__button button" type="submit">Отправить заказ</button>
           </div>

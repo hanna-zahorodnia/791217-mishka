@@ -43,23 +43,6 @@
   line-height: 57px;
 }
 
-@mixin wrapper {
-  margin: 0 auto;
-  padding: 0 30px 0;
-}
-
-@mixin wrapper-tablet {
-  margin: 0 auto;
-  padding: 0 50px 0;
-}
-
-@mixin wrapper-desktop {
-  width: 1200px;
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0 75px 0;
-}
-
 @mixin display ($disp, $b-margin) {
   display: $disp;
   margin-bottom: $b-margin;

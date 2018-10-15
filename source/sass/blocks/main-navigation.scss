@@ -14,7 +14,7 @@
 }
 
 .main-navigation--closed .main-navigation__toggle {
-  top: -80px;
+  bottom: 100%;
   right: 0;
 
   padding: 40px;
@@ -25,7 +25,7 @@
 }
 
 .main-navigation--opened .main-navigation__toggle {
-  top: -80px;
+  bottom: 100%;
   right: 0;
 
   padding: 40px;

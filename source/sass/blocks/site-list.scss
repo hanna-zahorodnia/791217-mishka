@@ -34,7 +34,7 @@
     display: flex;
     flex-wrap: nowrap;
     position: absolute;
-    top: 105px;
+    top: 100%;
     left: 49px;
     width: 336px;
     z-index: 1;
@@ -47,7 +47,7 @@
   }
 
   .site-list__link {
-    padding: 0;
+    padding: 18px 0;
 
     font-size: 15px;
   }
