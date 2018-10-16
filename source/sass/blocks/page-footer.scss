@@ -10,7 +10,7 @@
   padding-bottom: 30px;
 }
 
-.page-footer__logo-image {
+.page-footer__logo {
   display: none;
 }
 
@@ -20,12 +20,19 @@
     justify-content: space-between;
     align-items: center;
 
-    padding-top: 42px;
-    padding-bottom: 50px;
+    padding-top: 51px;
+    padding-bottom: 54px;
   }
 
   .page-footer__logo {
-    margin-right: auto;
+    display: block;
+    flex-basis: 30%;
+
+    margin: 0;
+  }
+
+  .page-footer__link {
+    display: inline-block;
 
     &:hover .page-footer__logo-image {
       fill: #46c1ae;

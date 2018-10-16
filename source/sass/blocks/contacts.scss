@@ -43,8 +43,8 @@
 .contacts__map {
   @include display (block, 54px);
 
-  width: 322px;
-  height: 457px;
+  width: 100%;
+  height: auto;
 }
 
 .contacts__bottom-wrapper {
@@ -120,7 +120,6 @@
   }
 
   .contacts__map {
-    width: 768px;
     height: 457px;
 
     margin-bottom: 56px;
@@ -150,6 +149,7 @@
   }
 
   .contacts__wrapper {
+    width: 1050px;
     margin-bottom: 0;
     padding: 140px 0 78px 174px;
   }
@@ -195,6 +195,8 @@
   }
 
   .contacts__bottom-wrapper {
+    width: 1050px;
+
     padding-bottom: 105px;
     padding-left: 176px;
   }

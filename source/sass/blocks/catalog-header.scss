@@ -8,9 +8,6 @@
 .catalog-header__title {
   @include page-header;
 
-  padding-right: 20px;
-  padding-left: 20px;
-
   text-align: center;
 }
 
@@ -40,10 +37,6 @@
     }
   }
 
-  .catalog-header__wrapper {
-    position: relative;
-  }
-
   .catalog-header__title {
     @include section-header-tb;
 
@@ -64,8 +57,5 @@
 
   .catalog-header__title {
     @include section-header-desktop;
-
-    padding-left: 50px;
-    padding-right: 50px;
   }
 }
