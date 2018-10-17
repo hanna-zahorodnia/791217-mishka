@@ -4,7 +4,7 @@
   align-items: center;
 
   margin: 0 auto;
-  padding: 16px 38px 0;
+  padding: 20px 38px 0;
 
   font-size: $primary-font-size + 2px;
   line-height: $primary-font-size + 1px;
@@ -14,7 +14,7 @@
 }
 
 .copyright__text {
-  margin-right: 21px;
+  margin-right: 28px;
 }
 
 .copyright__image {
@@ -29,18 +29,30 @@
     padding: 0;
 
     border: none;
-
-    &:hover .copyright__image {
-      fill: #46c1ae;
-    }
-
-    &:active .copyright__image {
-      fill: #46c1ae;
-      opacity: 0.3;
-    }
   }
 
   .copyright__text {
     margin-right: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .copyright {
+    &:hover {
+      .copyright__image {
+        fill: #46c1ae;
+      }
+    }
+
+    &:active {
+      .copyright__image {
+        fill: #46c1ae;
+        opacity: 0.3;
+      }
+
+      .copyright__text {
+        opacity: 0.3;
+      }
+    }
   }
 }
