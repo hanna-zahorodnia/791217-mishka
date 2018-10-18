@@ -11,8 +11,7 @@
 
 .form-header__text {
   margin: 0;
-  margin-left: 30px;
-  padding-right: 45px;
+  padding-right: 30px;
 
   font-size: $txt-size - 2px;
   font-weight: 400;
@@ -24,13 +23,28 @@
   .form-header {
     @include section-header-tb;
 
-    margin-bottom: 75px;
-    padding: 93px 10px 80px;
+    position: relative;
+
+    margin-bottom: 59px;
+    padding: 93px 10px 95px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 22px;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-position: 0 0;
+      background-size: contain;
+    }
   }
 
   .form-header__text {
-    @include wrapper-tablet;
-
     font-size: 17px;
     line-height: 30px;
   }
@@ -40,15 +54,16 @@
   .form-header {
     @include section-header-desktop;
 
-    margin-bottom: 125px;
-    padding-bottom: 100px;
+    margin-bottom: 114px;
+    padding-bottom: 112px;
+
+    &::after {
+      background-size: initial;
+    }
   }
 
   .form-header__text {
-    width: 1200px;
-    box-sizing: border-box;
-
-    margin: 0 auto;
-    padding: 0 250px;
+    padding-left: 175px;
+    padding-right: 175px;
   }
 }

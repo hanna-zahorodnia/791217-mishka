@@ -8,6 +8,7 @@
 @import "vendors/normalize.scss";
 
 // Blocks
+@import "blocks/container.scss";
 @import "blocks/page-header";
 @import "blocks/main-navigation";
 @import "blocks/site-list";
@@ -26,3 +27,5 @@
 @import "blocks/video";
 @import "blocks/form-header";
 @import "blocks/order";
+@import "blocks/modal";
+@import "blocks/modal-form.scss";

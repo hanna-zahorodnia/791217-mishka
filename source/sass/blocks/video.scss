@@ -1,11 +1,11 @@
 .video__wrapper {
-  @include wrapper;
-
   padding-top: 30px;
   padding-bottom: 58px;
 }
 
 .video__container {
+  position: relative;
+
   padding-top: 23px;
   padding-bottom: 32px;
 
@@ -13,6 +13,10 @@
 }
 
 .video__title {
+  position: relative;
+
+  max-width: 240px;
+
   margin: 0;
   margin-bottom: 24px;
   padding-right: 15px;
@@ -20,13 +24,41 @@
 
   font-size: $primary-font-size;
   line-height: 24px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 6px;
+    left: 33px;
+    width: 32px;
+    height: 32px;
+
+    background-color: transparent;
+    background-image: url("../img/icon-video.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .video__image {
-  height: 150px;
-  width: 260px;
+  height: auto;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 
-  margin-bottom: 24px;
+  margin-bottom: 27px;
+}
+
+.video__play {
+  position: absolute;
+  top: 31%;
+  left: 50%;
+  transform: translate(-50%, -31%);
+
+  width: 101px;
+  height: 77px;
+  cursor: pointer;
 }
 
 .video__description {
@@ -49,8 +81,6 @@
 
 @media (min-width: $tablet-width) {
   .video__wrapper {
-    @include wrapper-tablet;
-
     padding-top: 52px;
     padding-bottom: 63px;
   }
@@ -64,10 +94,17 @@
   }
 
   .video__title {
+    max-width: 500px;
+
     margin-bottom: 32px;
     padding-left: 106px;
 
     font-size: 20px;
+
+    &::after {
+      top: -5px;
+      left: 41px;
+    }
   }
 
   .video__image {
@@ -76,6 +113,12 @@
     width: 668px;
 
     margin-bottom: 39px;
+  }
+
+  .video__play {
+    top: 29%;
+    left: 50%;
+    transform: translate(-50%, -29%);
   }
 
   .video__description {
@@ -93,9 +136,7 @@
 
 @media (min-width: $desktop-width) {
   .video__wrapper {
-    @include wrapper-desktop;
-
-    padding-top: 52px;
+    padding-top: 58px;
     padding-bottom: 105px;
   }
 
@@ -104,12 +145,25 @@
 
     padding-right: 55px;
     padding-bottom: 59px;
+
+    &:hover {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    }
   }
 
   .video__title {
     margin: 50px 0 34px 760px;
-    padding-top: 50px;
+    padding-top: 45px;
     padding-left: 0;
+
+    &::after {
+      top: -9px;
+      left: 2px;
+    }
   }
 
   .video__image {
@@ -117,8 +171,23 @@
     width: 682px;
   }
 
+  .video__play {
+    top: 188px;
+    left: 290px;
+    transform: none;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      transform: scale(0.8);
+      opacity: 0.3;
+    }
+  }
+
   .video__description {
-    margin-bottom: 46px;
+    margin-bottom: 45px;
     margin-left: 760px;
     padding: 0;
   }

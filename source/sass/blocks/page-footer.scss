@@ -3,38 +3,48 @@
 }
 
 .page-footer__wrapper {
-  @include wrapper;
+  display: flex;
+  flex-direction: column;
 
   padding-top: 26px;
   padding-bottom: 30px;
 }
 
-.page-footer__logo-image {
+.page-footer__logo {
   display: none;
 }
 
 @media (min-width: $tablet-width) {
   .page-footer__wrapper {
-    @include wrapper-tablet;
-
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    padding-top: 34px;
-    padding-bottom: 41px;
+    padding-top: 51px;
+    padding-bottom: 54px;
+  }
+
+  .page-footer__logo {
+    display: block;
+    flex-basis: 30%;
+
+    margin: 0;
+  }
+
+  .page-footer__link {
+    display: inline-block;
+
+    &:hover .page-footer__logo-image {
+      fill: #46c1ae;
+    }
+
+    &:active .page-footer__logo-image {
+      fill: #46c1ae;
+      opacity: 0.3;
+    }
   }
 
   .page-footer__logo-image {
     display: block;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .page-footer__wrapper {
-    @include wrapper-desktop;
-
-    padding-top: 34px;
-    padding-bottom: 41px;
   }
 }

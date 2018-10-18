@@ -11,8 +11,7 @@
   align-items: center;
   width: 141px;
 
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
 
   text-align: center;
 }
@@ -22,12 +21,46 @@
 
   display: flex;
   justify-content: center;
-  width: 25px;
-  height: 28px;
+
+  &--instagram {
+    width: 22px;
+    height: 21px;
+  }
+
+  &--facebook {
+    width: 15px;
+    height: 28px;
+  }
+
+  &--twitter {
+    width: 23px;
+    height: 20px;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .social {
-    margin: 10px 0 0 75px;
+    margin: 0 auto 0 60px;
+  }
+
+  .social__link-icon {
+    fill: #231f20;
+  }
+
+  .social__link {
+    &:hover .social__link-icon {
+      fill: #46c1ae;
+    }
+
+    &:active .social__link-icon {
+      fill: #46c1ae;
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .social {
+    margin: 0 auto;
   }
 }

@@ -1,8 +1,6 @@
 $lh: 24px;
 
 .catalog__wrapper {
-  @include wrapper;
-
   padding-top: 29px;
 }
 
@@ -14,6 +12,8 @@ $lh: 24px;
 }
 
 .catalog__item {
+  position: relative;
+
   display: flex;
   flex-direction: column;
 
@@ -45,8 +45,7 @@ $lh: 24px;
 
 .catalog__image {
   display: block;
-  width: 260px;
-  height: 195px;
+  width: 100%;
 }
 
 .catalog__item-size {
@@ -68,11 +67,34 @@ $lh: 24px;
   border-top: $border;
 }
 
+.catalog__add-to-cart {
+  position: absolute;
+  bottom: 31px;
+  right: 27px;
+
+  width: 20px;
+  height: 19px;
+
+  opacity: 0.2;
+
+  fill: #000000;
+
+  &:hover {
+    opacity: 1;
+
+    fill: $mint-light;
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    fill: $mint-light;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .catalog__wrapper {
-    @include wrapper-tablet;
-
-    padding-top: 83px;
+    padding-top: 67px;
   }
 
   .catalog__item {
@@ -82,6 +104,14 @@ $lh: 24px;
     margin-bottom: 54px;
 
     box-sizing: border-box;
+
+    &:hover {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    }
   }
 
   .catalog__name {
@@ -120,13 +150,18 @@ $lh: 24px;
 
     font-size: $primary-font-size;
   }
+
+  .catalog__add-to-cart {
+    width: 21px;
+    height: 18px;
+
+    right: 30px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .catalog__wrapper {
-    @include wrapper-desktop;
-
-    padding-top: 132px;
+    padding-top: 122px;
   }
 
   .catalog__list {

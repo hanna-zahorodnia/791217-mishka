@@ -1,6 +1,4 @@
 .order__wrapper {
-  @include wrapper;
-
   padding-top: 25px;
   padding-bottom: 55px;
 }
@@ -17,7 +15,7 @@
   }
 
   &--color {
-    margin-bottom: 1px;
+    margin-bottom: 0;
   }
 
   &--personal {
@@ -34,53 +32,113 @@
 }
 
 .order__field-title {
-  margin-bottom: 33px;
-
   line-height: 16px;
   color: $mint-light;
 
   text-transform: uppercase;
 
+  &--type {
+    margin-bottom: 33px;
+  }
+
+  &--color {
+    margin-bottom: 35px;
+  }
+
   &--personal {
-    margin-bottom: 29px;
+    margin-bottom: 28px;
   }
 
   &--phone {
-    margin-bottom: 20px;
+    margin-bottom: 19px;
   }
 
   &--email {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
 
   &--comment {
-    margin-bottom: 23px;
+    margin-bottom: 25px;
   }
 }
 
 .order__type-item {
-  margin-bottom: 20px;
+  margin-bottom: 23px;
   padding-left: 62px;
 }
 
 .order__color-item {
-  margin-bottom: 41px;
-  padding-left: 61px;
+  margin-bottom: 43px;
+  padding-left: 62px;
 }
 
 .order__label {
+  position: relative;
+
+  display: block;
+
   line-height: 18px;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.order__checkbox + .order__label::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: -61px;
+
+  width: 40px;
+  height: 39px;
+
+  border: 2px solid #444444;
+}
+
+.order__checkbox:checked + .order__label::before {
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 22px 16px;
+  background-position: center;
+}
+
+.order__radio + .order__label::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -61px;
+
+  width: 39px;
+  height: 39px;
+
+  border: 2px solid #444444;
+  border-radius: 50%;
+}
+
+.order__radio:checked + .order__label::after {
+  content: "";
+
+  position: absolute;
+  top: 3px;
+  left: -50px;
+
+  width: 16px;
+  height: 16px;
+
+  background-color: #62d1ba;
+  border-radius: 50%;
 }
 
 .order__field-label {
   display: block;
-  margin-bottom: 14px;
+  margin-bottom: 13px;
 
   line-height: 18px;
 }
 
 .order__field {
-  margin-bottom: 23px;
+  margin-bottom: 22px;
 
   &--comment {
     margin-bottom: 0;
@@ -90,13 +148,72 @@
 .order__input {
   width: 100%;
 
-  padding-bottom: 15px;
+  padding: 2px 0 16px;
 
   border: none;
   border-bottom: 2px solid #000000;
+  border-radius: 0;
+
+  &--phone {
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: top -3px right 9px;
+
+    &:focus {
+      background-image: url("../img/icon-phone-green.svg");
+      background-repeat: no-repeat;
+      background-color: transparent;
+      background-position: top -3px right 9px;
+    }
+
+    &:active {
+      background-image: url("../img/icon-phone-green.svg");
+      background-repeat: no-repeat;
+      background-color: transparent;
+      background-position: top -3px right 9px;
+    }
+  }
+
+  &--email {
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: top -2px right 5px;
+
+    &:focus {
+      background-image: url("../img/icon-mail-green.svg");
+      background-repeat: no-repeat;
+      background-color: transparent;
+      background-position: top -2px right 5px;
+    }
+
+    &:active {
+      background-image: url("../img/icon-mail-green.svg");
+      background-repeat: no-repeat;
+      background-color: transparent;
+      background-position: top -2px right 5px;
+    }
+  }
 
   &::placeholder {
     color: rgba($txt-color, $alpha: 0.2);
+  }
+
+  &:hover {
+    border-bottom: 2px solid #62d1ba;
+  }
+
+  &:active {
+    outline: none;
+    color: $txt-color;
+    border-bottom: 2px solid #62d1ba;
+  }
+
+  &:focus {
+    outline: none;
+    color: $txt-color;
+    border-bottom: 2px solid #62d1ba;
   }
 }
 
@@ -104,12 +221,32 @@
   width: 100%;
   box-sizing: border-box;
 
-  padding: 14px 17px 12px;
+  padding: 14px 15px 10px;
 
   border: 2px solid #000000;
 
+  // For Mobile Safari (iPhone)
+  border-radius: 0;
+  appearance: none;
+
   &::placeholder {
     color: rgba($txt-color, $alpha: 0.2);
+  }
+
+  &:hover {
+    border: 2px solid #62d1ba;
+  }
+
+  &:active {
+    outline: none;
+    color: $txt-color;
+    border: 2px solid #62d1ba;
+  }
+
+  &:focus {
+    outline: none;
+    color: $txt-color;
+    border: 2px solid #62d1ba;
   }
 }
 
@@ -123,7 +260,8 @@
 
 .order__required {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
+  margin-left: -3px;
 
   font-size: $txt-size - 1px;
   font-weight: 400;
@@ -131,7 +269,11 @@
 }
 
 .order__button {
-  padding: 14px 45px;
+  width: 100%;
+
+  display: block;
+
+  padding: 14px;
 }
 
 @media (min-width: $tablet-width) {
@@ -168,8 +310,23 @@
     flex-wrap: nowrap;
     align-items: baseline;
 
-    margin-bottom: 11px;
-    padding: 0 50px 0;
+    padding-bottom: 13px;
+  }
+
+  .order__radio + .order__label::before {
+    top: -15px;
+    left: -80px;
+
+    width: 52px;
+    height: 52px;
+  }
+
+  .order__radio:checked + .order__label::after {
+    top: 1px;
+    left: -65px;
+
+    width: 21px;
+    height: 21px;
   }
 
   .order__color-fieldset-container {
@@ -177,44 +334,49 @@
     flex-wrap: nowrap;
     align-items: baseline;
 
-    padding: 66px 20px 11px 50px;
+    padding-top: 66px;
+    padding-bottom: 11px;
+  }
+
+  .order__checkbox + .order__label::before {
+    top: -16px;
+    left: -82px;
+
+    width: 54px;
+    height: 52px;
+  }
+
+  .order__checkbox:checked + .order__label::before {
+    background-size: 33px 32px;
   }
 
   .order__personal-fieldset-container {
-    @include wrapper-tablet;
-
     display: flex;
     flex-wrap: nowrap;
     align-items: baseline;
 
-    padding-top: 60px;
+    padding-top: 58px;
     padding-bottom: 17px;
   }
 
   .order__phone-fieldset-container {
-    @include wrapper-tablet;
-
     display: flex;
     flex-wrap: nowrap;
     align-items: baseline;
 
-    padding-top: 62px;
-    padding-bottom: 17px;
+    padding-top: 61px;
+    padding-bottom: 18px;
   }
 
   .order__email-fieldset-container {
-    @include wrapper-tablet;
-
     display: flex;
     flex-wrap: nowrap;
     align-items: baseline;
 
-    padding-bottom: 30px;
+    padding-bottom: 32px;
   }
 
   .order__comment-fieldset-container {
-    @include wrapper-tablet;
-
     display: flex;
     flex-wrap: nowrap;
     align-items: baseline;
@@ -229,6 +391,7 @@
 
   .order__type-item {
     margin-bottom: 57px;
+    padding-left: 80px;
 
     font-size: 19px;
     line-height: 18px;
@@ -237,10 +400,11 @@
   .order__color-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .order__color-item {
-    flex-basis: 180px;
+    flex-basis: 238px;
 
     padding-left: 81px;
     margin-bottom: 58px;
@@ -251,7 +415,7 @@
 
   .order__field-title {
     &--type {
-      margin-right: 150px;
+      margin-right: 130px;
     }
 
     &--color {
@@ -284,24 +448,37 @@
   }
 
   .order__input {
-    padding-bottom: 13px;
-    padding-left: 17px;
+    padding: 2px 17px 13px;
 
     font-size: 19px;
     line-height: 18px;
 
     &--phone {
       padding-top: 0;
-      padding-bottom: 11px;
 
-      background-color: transparent;
+      background-position: top 0 right 26px;
+
+      &:focus {
+        background-position: top 0 right 26px;
+      }
+
+      &:active {
+        background-position: top 0 right 26px;
+      }
     }
 
     &--email {
       padding-top: 0;
-      padding-bottom: 13px;
 
-      background-color: transparent;
+      background-position: top 0 right 23px;
+
+      &:focus {
+        background-position: top 0 right 23px;
+      }
+
+      &:active {
+        background-position: top 0 right 23px;
+      }
     }
   }
 
@@ -311,7 +488,7 @@
     align-items: baseline;
     flex-grow: 1;
 
-    margin-bottom: 19px;
+    margin-bottom: 18px;
   }
 
   .order__comment {
@@ -333,88 +510,62 @@
   }
 
   .order__bottom-wrapper {
-    @include wrapper-tablet;
-
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
   }
 
   .order__button {
+    width: auto;
+
     padding: 14px 29px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .order__type-fieldset-container {
-    width: 1200px;
-    box-sizing: border-box;
-
-    margin: 0 auto;
     padding: 0 140px 12px;
   }
 
   .order__color-fieldset-container {
-    width: 1200px;
-    box-sizing: border-box;
+    padding: 66px 100px 11px 135px;
+  }
 
-    margin: 0 auto;
+  .order__color-list {
+    justify-content: flex-start;
+  }
 
-    padding: 66px 100px 10px 135px;
+  .order__color-item {
+    flex-basis: 263px;
   }
 
   .order__personal-fieldset-container {
-    width: 1200px;
-    box-sizing: border-box;
-
-    margin: 0 auto;
-
-    padding: 60px 250px 17px 135px;
+    padding: 58px 250px 17px 135px;
   }
 
   .order__phone-fieldset-container {
-    width: 1200px;
-    box-sizing: border-box;
-
-    margin: 0 auto;
-
-    padding: 61px 250px 18px 135px;
+    padding: 61px 250px 19px 135px;
   }
 
   .order__email-fieldset-container {
-    width: 1200px;
-    box-sizing: border-box;
-
-    margin: 0 auto;
-
-    padding: 0 250px 30px 135px;
+    padding: 0 250px 31px 135px;
   }
 
   .order__comment-fieldset-container {
-    width: 1200px;
-    box-sizing: border-box;
-
-    margin: 0 auto;
-
-    padding: 50px 250px 30px 135px;
+    padding: 50px 250px 28px 135px;
   }
 
   .order__bottom-wrapper {
-    width: 1200px;
-    box-sizing: border-box;
-
-    margin: 0 auto;
-
     padding: 0 250px;
   }
 
   .order__field-title {
     &--type {
-      margin-right: 93px;
+      margin-right: 73px;
     }
 
     &--color {
-      margin-right: 70px;
+      margin-right: 71px;
     }
 
     &--personal {
@@ -431,6 +582,58 @@
 
     &--comment {
       margin-right: 77px;
+    }
+  }
+
+  .order__radio {
+    &:hover + .order__label::before {
+      border: 2px solid #62d1ba;
+    }
+
+    &:active + .order__label::before {
+      border: 2px solid rgba(#444444, 0.3);
+    }
+  }
+
+  .order__checkbox {
+    &:hover + .order__label::before {
+      border: 2px solid #62d1ba;
+    }
+
+    &:active + .order__label::before {
+      border: 2px solid rgba(#444444, 0.3);
+    }
+  }
+
+  .order__input {
+    &--phone {
+      background-position: top 0 right 8px;
+
+      &:hover {
+        background-image: url("../img/icon-phone-green.svg");
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-position: top 0 right 8px;
+      }
+
+      &:focus {
+        background-position: top 0 right 8px;
+      }
+    }
+
+    &--email {
+      background-position: top 0 right 4px;
+
+      &:hover {
+        background-image: url("../img/icon-mail-green.svg");
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-position: top 0 right 4px;
+      }
+
+      &:focus {
+        background-position: top 0 right 4px;
+      }
     }
   }
 }
