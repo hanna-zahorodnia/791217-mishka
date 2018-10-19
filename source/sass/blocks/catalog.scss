@@ -136,11 +136,6 @@ $lh: 24px;
     height: 334px;
   }
 
-  /*.catalog__image {
-    width: 334px;
-    height: 334px;
-  }*/
-
   .catalog__item-size {
     margin-left: 360px;
 
@@ -176,7 +171,7 @@ $lh: 24px;
 
   .catalog__item {
     width: 316px;
-    height: unset;
+    height: auto;
 
     margin-right: 51px;
     margin-bottom: 0;

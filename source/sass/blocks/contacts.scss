@@ -189,7 +189,10 @@
   }
 
   .contacts__list {
-    flex-direction: column;
+    //flex-direction: column;
+
+    //для IE11
+    display: block;
   }
 
   .contacts__item {

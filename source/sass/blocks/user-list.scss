@@ -102,5 +102,15 @@
     align-items: flex-start;
 
     padding-left: 175px;
+
+    // для IE11
+    flex: 0 0 auto;
+  }
+
+  // для IE11
+  .user-list__item {
+    &--cart {
+      flex: 1 0 auto;
+    }
   }
 }

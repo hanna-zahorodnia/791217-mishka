@@ -185,6 +185,10 @@
 
   .video__image {
     position: absolute;
+
+    //для IE11
+    top: 0;
+
     width: 682px;
 
     background-image: url("../img/video-desktop@1x.jpg");
@@ -219,5 +223,8 @@
   .video__order {
     margin: 0 0 0 auto;
     padding: 14px 44px;
+
+    //для IE11
+    align-self: flex-start;
   }
 }

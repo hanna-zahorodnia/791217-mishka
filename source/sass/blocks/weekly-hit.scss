@@ -198,6 +198,9 @@
   .weekly-hit__image-wrapper {
     top: 70px;
 
+    //для IE11
+    right: 75px;
+
     width: 525px;
     height: 636px;
   }

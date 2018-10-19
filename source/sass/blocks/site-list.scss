@@ -56,16 +56,24 @@
 @media (min-width: $desktop-width) {
   .site-list {
     position: inherit;
-    width: 382px;
+    //width: 382px;
     align-items: baseline;
     flex-wrap: wrap;
-    flex: 0 0 50%;
+    //flex: 0 0 50%;
 
     padding-right: 145px;
+
+    //для IE11
+    flex: 0 0 auto;
+    width: 50%;
   }
 
   .site-list__item {
-    flex: 1 0 190px;
+    //flex: 1 0 190px;
+
+    //для IE11
+    flex: 0 0 auto;
+    width: 190px;
 
     padding: 0;
 
