@@ -191,11 +191,18 @@ $items-color: $bg-color;
   }
 
   .intro__container {
-    width: 1200px;
+    /*width: 1200px;
 
     margin-left: auto;
     margin-right: auto;
-    padding: 153px 75px 0 75px;
+    padding: 153px 75px 0 75px;*/
+
+    width: 1050px;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+
 
     padding-top: 153px;
   }

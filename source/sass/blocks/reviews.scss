@@ -7,7 +7,7 @@
   background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
   background-position: bottom;
-  background-size: contain;
+  background-size: auto 6px;
 }
 
 .reviews__title {
@@ -65,6 +65,11 @@
 
   background-color: $bg-color;
   border: 1px solid #ececec;
+  border-left: transparent;
+
+  &:first-child {
+    border-left: 1px solid #ececec;
+  }
 
   &:hover {
     opacity: 0.6;
@@ -113,6 +118,8 @@
 
     padding-top: 76px;
     padding-bottom: 130px;
+
+    background-size: auto 17px;
   }
 
   .reviews__title {
@@ -152,6 +159,12 @@
 
   .reviews__button {
     width: 85px;
+
+    border: transparent;
+
+    &:first-child {
+      border-left: transparent;
+    }
   }
 
   .reviews__write-review {
@@ -180,6 +193,8 @@
     width: 1050px;
 
     padding: 70px 0 187px 175px;
+
+    background-size: auto 23px;
   }
 
   .reviews__author {
@@ -194,10 +209,6 @@
   .reviews__buttons {
     right: 0;
     bottom: 188px;
-  }
-
-  .reviews__button {
-    border: none;
   }
 
   .reviews__write-review {

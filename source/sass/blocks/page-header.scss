@@ -78,9 +78,12 @@
   }
 
   .page-header__wrapper {
-    width: 1200px;
+    /*width: 1200px;
     padding-left: 75px;
-    padding-right: 75px;
+    padding-right: 75px;*/
+
+    width: 1050px;
+    padding: 0;
   }
 
   .page-header__logo {
@@ -98,6 +101,8 @@
   }
 
   .page-header__label {
-    right: 75px;
+    //right: 75px;
+
+    right: 0;
   }
 }

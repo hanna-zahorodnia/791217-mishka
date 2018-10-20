@@ -1,12 +1,11 @@
 .order__wrapper {
-  padding-top: 32px;
-  padding-bottom: 55px;
+  padding: 32px 30px 55px;
 }
 
 .order__fieldset {
   padding: 0;
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
 
   border: 0;
   border-top: 1px solid #62d1ba;
@@ -16,15 +15,15 @@
   }
 
   &--color {
-    margin-bottom: 6px;
+    margin-bottom: 7px;
   }
 
   &--personal {
-    margin-bottom: 16px;
+    margin-bottom: 17px;
   }
 
   &--phone {
-    margin-bottom: 17px;
+    margin-bottom: 18px;
   }
 
   &--email {
@@ -32,33 +31,21 @@
   }
 }
 
-.order__type-fieldset-container {
-  margin-top: -7px;
-}
-
-.order__color-fieldset-container {
-  margin-top: -7px;
-}
-
-.order__personal-fieldset-container {
-  margin-top: -7px;
-}
-
-.order__phone-fieldset-container {
-  margin-top: -7px;
-}
-
-.order__email-fieldset-container {
-  margin-top: -8px;
-}
-
-.order__comment-fieldset-container {
-  margin-top: -8px;
+.order__fieldset-container {
+  margin-top: -10px;
 }
 
 .order__field-title {
+  display: inline-block;
+
+  margin: 0;
+  padding-right: 25px;
+
+  font-size: 17px;
   line-height: 16px;
   color: $mint-light;
+
+  background-color: #ffffff;
 
   text-transform: uppercase;
 
@@ -304,7 +291,7 @@
 @media (min-width: $tablet-width) {
   .order__wrapper {
     padding: 0;
-    padding-top: 72px;
+    padding-top: 82px;
     padding-bottom: 50px;
   }
 
@@ -332,12 +319,34 @@
     }
   }
 
-  .order__type-fieldset-container {
+  .order__fieldset-container {
     display: flex;
     flex-wrap: nowrap;
     align-items: baseline;
 
-    padding-bottom: 13px;
+    &--type {
+      padding: 0 50px 12px;
+    }
+
+    &--color {
+      padding: 77px 50px 11px;
+    }
+
+    &--personal {
+      padding: 68px 50px 17px;
+    }
+
+    &--phone {
+      padding: 71px 50px 28px;
+    }
+
+    &--email {
+      padding: 0 50px 32px;
+    }
+
+    &--comment {
+      padding: 60px 50px 34px;
+    }
   }
 
   .order__radio + .order__label::before {
@@ -356,15 +365,6 @@
     height: 21px;
   }
 
-  .order__color-fieldset-container {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: baseline;
-
-    padding-top: 66px;
-    padding-bottom: 11px;
-  }
-
   .order__checkbox + .order__label::before {
     top: -16px;
     left: -82px;
@@ -375,41 +375,6 @@
 
   .order__checkbox:checked + .order__label::before {
     background-size: 33px 32px;
-  }
-
-  .order__personal-fieldset-container {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: baseline;
-
-    padding-top: 58px;
-    padding-bottom: 17px;
-  }
-
-  .order__phone-fieldset-container {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: baseline;
-
-    padding-top: 61px;
-    padding-bottom: 18px;
-  }
-
-  .order__email-fieldset-container {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: baseline;
-
-    padding-bottom: 32px;
-  }
-
-  .order__comment-fieldset-container {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: baseline;
-
-    padding-top: 50px;
-    padding-bottom: 34px;
   }
 
   .order__personal-container {
@@ -441,28 +406,30 @@
   }
 
   .order__field-title {
+    background-color: transparent;
+
     &--type {
-      margin-right: 130px;
+      margin-right: 105px;
     }
 
     &--color {
-      margin-right: 124px;
+      margin-right: 98px;
     }
 
     &--personal {
-      margin-right: 126px;
+      margin-right: 100px;
     }
 
     &--phone {
-      margin-right: 135px;
+      margin-right: 110px;
     }
 
     &--email {
-      margin-right: 109px;
+      margin-right: 83px;
     }
 
     &--comment {
-      margin-right: 128px;
+      margin-right: 103px;
     }
   }
 
@@ -540,6 +507,8 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+
+    padding: 0 50px;
   }
 
   .order__button {
@@ -550,13 +519,39 @@
 }
 
 @media (min-width: $desktop-width) {
-  .order__type-fieldset-container {
-    padding: 0 140px 12px;
+  .order__wrapper {
+    padding-top: 72px;
   }
 
-  .order__color-fieldset-container {
-    padding: 66px 100px 11px 135px;
+  .order__fieldset-container {
+    width: 1050px;
+    margin: 0 auto;
+
+    &--type {
+      padding: 0 64px 12px;
+    }
+
+    &--color {
+      padding: 66px 60px 11px;
+    }
+
+    &--personal {
+      padding: 58px 175px 17px 60px;
+    }
+
+    &--phone {
+      padding: 61px 175px 19px 60px;
+    }
+
+    &--email {
+      padding: 0 175px 31px 60px;
+    }
+
+    &--comment {
+      padding: 50px 175px 30px 60px;
+    }
   }
+
 
   .order__color-list {
     justify-content: flex-start;
@@ -566,49 +561,36 @@
     flex-basis: 263px;
   }
 
-  .order__personal-fieldset-container {
-    padding: 58px 250px 17px 135px;
-  }
-
-  .order__phone-fieldset-container {
-    padding: 61px 250px 19px 135px;
-  }
-
-  .order__email-fieldset-container {
-    padding: 0 250px 31px 135px;
-  }
-
-  .order__comment-fieldset-container {
-    padding: 50px 250px 28px 135px;
-  }
-
   .order__bottom-wrapper {
-    padding: 0 250px;
+    width: 1050px;
+
+    margin: 0 auto;
+    padding: 0 175px;
   }
 
   .order__field-title {
     &--type {
-      margin-right: 73px;
+      margin-right: 50px;
     }
 
     &--color {
-      margin-right: 71px;
+      margin-right: 46px;
     }
 
     &--personal {
-      margin-right: 75px;
+      margin-right: 50px;
     }
 
     &--phone {
-      margin-right: 82px;
-    }
-
-    &--email {
       margin-right: 57px;
     }
 
+    &--email {
+      margin-right: 32px;
+    }
+
     &--comment {
-      margin-right: 77px;
+      margin-right: 50px;
     }
   }
 
