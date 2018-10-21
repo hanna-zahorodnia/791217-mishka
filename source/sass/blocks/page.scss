@@ -6,14 +6,11 @@
   background-color: $bg-grey;
 
   text-align: center;
-
-  &--form {
-    margin-bottom: 22px;
-  }
 }
 
 .page__text {
   margin: 0;
+  padding-top: 22px;
 
   font-size: $txt-size - 2px;
   font-weight: 400;
@@ -33,13 +30,11 @@
     background-repeat: repeat-x;
     background-position: bottom;
     background-size: auto 24px;
-
-    &--form {
-      margin-bottom: 59px;
-    }
   }
 
   .page__text {
+    padding-top: 59px;
+
     font-size: 17px;
     line-height: 30px;
   }
@@ -52,14 +47,9 @@
     padding-bottom: 121px;
 
     background-size: auto 34px;
-
-    &--form {
-      margin-bottom: 105px;
-    }
   }
 
   .page__text {
-    padding-left: 175px;
-    padding-right: 175px;
+    padding: 105px 175px 0;
   }
 }

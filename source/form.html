@@ -61,7 +61,7 @@
     </div>
   </header>
   <main class="page">
-    <h1 class="page__title page__title--form">Вязание на заказ</h1>
+    <h1 class="page__title">Вязание на заказ</h1>
     <div class="container">
       <p class="page__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
         свяжемся с вами, чтобы уточнить детали.</p>
@@ -71,23 +71,23 @@
         <form class="order__form" method="POST" action="https://echo.htmlacademy.ru">
           <fieldset class="order__fieldset">
             <div class="order__fieldset-container order__fieldset-container--type">
-              <h2 class="order__field-title order__field-title--type">Тип</h2>
+              <h3 class="order__field-title order__field-title--type">Тип</h3>
               <ul class="order__type-list">
                 <li class="order__type-item order__type-item--checked">
                   <input class="visually-hidden order__radio" type="radio" name="type" value="accessory" id="accessory"
                     checked>
-                  <label class="order__label" for="accessory">Аксессуар для интерьера</label>
+                  <label class="order__label order__label--type" for="accessory">Аксессуар для интерьера</label>
                 </li>
                 <li class="order__type-item">
                   <input class="visually-hidden order__radio" type="radio" name="type" value="toys" id="toy">
-                  <label class="order__label" for="toy">Детская игрушка</label>
+                  <label class="order__label order__label--type" for="toy">Детская игрушка</label>
                 </li>
               </ul>
             </div>
           </fieldset>
           <fieldset class="order__fieldset order__fieldset--color">
             <div class="order__fieldset-container order__fieldset-container--color">
-              <h2 class="order__field-title order__field-title--color">Цвет</h2>
+              <h3 class="order__field-title order__field-title--color">Цвет</h3>
               <ul class="order__color-list">
                 <li class="order__color-item order__color-item--checked">
                   <input class="visually-hidden order__checkbox" type="checkbox" name="white" id="white" checked>
@@ -118,15 +118,15 @@
           </fieldset>
           <fieldset class="order__fieldset order__fieldset--personal">
             <div class="order__fieldset-container order__fieldset-container--personal">
-              <h2 class="order__field-title order__field-title--personal">ФИО</h2>
+              <h3 class="order__field-title order__field-title--personal">ФИО</h3>
               <div class="order__personal-container">
                 <div class="order__field">
                   <label class="order__field-label" for="name-field">Имя:</label>
-                  <input class="order__input" id="name-field" type="text" name="name" value="" placeholder="Введите ваше имя*">
+                  <input class="order__input" id="name-field" type="text" name="name" value="" placeholder="Введите ваше имя*" required>
                 </div>
                 <div class="order__field">
                   <label class="order__field-label" for="last-name-field">Фамилия:</label>
-                  <input class="order__input" id="last-name-field" type="text" name="last-name" value="" placeholder="Укажите фамилию*">
+                  <input class="order__input" id="last-name-field" type="text" name="last-name" value="" placeholder="Укажите фамилию*" required>
                 </div>
                 <div class="order__field">
                   <label class="order__field-label" for="patronymic-field">Отчество:</label>
@@ -137,23 +137,23 @@
           </fieldset>
           <fieldset class="order__fieldset order__fieldset--phone">
             <div class="order__fieldset-container order__fieldset-container--phone">
-              <h2 class="order__field-title order__field-title--phone">Тел</h2>
+              <h3 class="order__field-title order__field-title--phone">Тел</h3>
               <div class="order__field">
-                <input class="order__input order__input--phone" type="tel" name="phone-number" value="" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+                <input class="order__input order__input--phone" type="tel" name="phone-number" value="" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
               </div>
             </div>
           </fieldset>
           <fieldset class="order__fieldset order__fieldset--email">
             <div class="order__fieldset-container order__fieldset-container--email">
-              <h2 class="order__field-title order__field-title--email">E-mail</h2>
+              <h3 class="order__field-title order__field-title--email">E-mail</h3>
               <div class="order__field">
-                <input class="order__input order__input--email" type="email" name="email" value="" placeholder="Ваш Email*">
+                <input class="order__input order__input--email" type="email" name="email" value="" placeholder="Ваш Email*" required>
               </div>
             </div>
           </fieldset>
           <fieldset class="order__fieldset">
             <div class="order__fieldset-container order__fieldset-container--comment">
-              <h2 class="order__field-title order__field-title--comment">Доп</h2>
+              <h3 class="order__field-title order__field-title--comment">Доп</h3>
               <div class="order__field order__field--comment">
                 <label class="visually-hidden" for="comment-field">Дополнительная информация:</label>
                 <textarea class="order__comment" id=" comment-field" name="comment" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>

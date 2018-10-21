@@ -93,6 +93,10 @@
 
   cursor: pointer;
   user-select: none;
+
+  &--type {
+    min-height: 36px;
+  }
 }
 
 .order__checkbox + .order__label::before {
