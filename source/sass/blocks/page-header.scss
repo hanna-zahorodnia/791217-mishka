@@ -5,6 +5,7 @@
 .page-header__logo {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100px;
   height: 79px;
 
@@ -13,9 +14,6 @@
 }
 
 .page-header__logo-image {
-  width: 86px;
-  height: 35px;
-
   margin: auto 0;
 }
 
@@ -45,11 +43,6 @@
 
     margin-left: -20px;
 
-    background-color: transparent;
-    background-image: url("../img/logo-tablet.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-
     border: none;
   }
 
@@ -61,13 +54,6 @@
     &:active {
       opacity: 0.3;
     }
-  }
-
-  .page-header__logo-image {
-    width: 113px;
-    height: 46px;
-
-    opacity: 0;
   }
 
   .page-header__label {
@@ -92,9 +78,12 @@
   }
 
   .page-header__wrapper {
-    width: 1200px;
+    /*width: 1200px;
     padding-left: 75px;
-    padding-right: 75px;
+    padding-right: 75px;*/
+
+    width: 1050px;
+    padding: 0;
   }
 
   .page-header__logo {
@@ -104,8 +93,6 @@
     transform: translateX(-50%);
 
     margin: 0;
-
-    background-image: url("../img/logo-desktop.svg");
   }
 
   .page-header__logo-image {
@@ -114,6 +101,8 @@
   }
 
   .page-header__label {
-    right: 75px;
+    //right: 75px;
+
+    right: 0;
   }
 }

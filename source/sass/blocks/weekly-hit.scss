@@ -7,7 +7,7 @@
   background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
   background-position: bottom;
-  background-size: contain;
+  background-size: auto 6px;
 }
 
 .weekly-hit__header {
@@ -94,6 +94,8 @@
 
     padding-top: 44px;
     padding-bottom: 70px;
+
+    background-size: auto 17px;
   }
 
   .weekly-hit__header-wrapper {
@@ -117,7 +119,7 @@
     text-align: center;
   }
 
-  .weekly-hit__image {
+  .weekly-hit__image-wrapper {
     position: absolute;
     top: 152px;
 
@@ -167,6 +169,8 @@
   .weekly-hit__wrapper {
     padding-top: 69px;
     padding-bottom: 100px;
+
+    background-size: auto 23px;
   }
 
   .weekly-hit__header-wrapper {
@@ -195,8 +199,13 @@
     margin-bottom: 49px;
   }
 
-  .weekly-hit__image {
+  .weekly-hit__image-wrapper {
     top: 70px;
+
+    //для IE11
+    //right: 75px;
+
+    right: 0;
 
     width: 525px;
     height: 636px;

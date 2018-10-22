@@ -17,11 +17,6 @@
   display: flex;
 
   margin-bottom: 30px;
-
-  &:last-of-type {
-    margin-bottom: 0;
-    padding-right: 30px;
-  }
 }
 
 .contacts__item-property {
@@ -35,16 +30,32 @@
 
   &--email {
     color: $txt-color;
+    word-break: break-all;
 
     border-bottom: 1px solid #62d1ba;
   }
 }
 
 .contacts__map {
-  @include display (block, 54px);
+  height: 457px;
 
+  margin-bottom: 53px;
+
+  background-image: url("../img/map-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    background-image: url("../img/map-mobile@2x.jpg");
+  }
+}
+
+.contacts__map-interactive {
   width: 100%;
-  height: auto;
+  height: 100%;
+  border: 0;
 }
 
 .contacts__bottom-wrapper {
@@ -61,7 +72,7 @@
 
 @media (min-width: $tablet-width) {
   .contacts__wrapper {
-    margin-bottom: 56px;
+    margin-bottom: 27px;
     padding-top: 62px;
   }
 
@@ -90,6 +101,7 @@
   .contacts__list {
     display: flex;
     flex-wrap: nowrap;
+    align-items: flex-start;
   }
 
   .contacts__item {
@@ -97,10 +109,6 @@
 
     font-size: 17px;
     line-height: 30px;
-
-    &:first-of-type {
-      margin-bottom: auto;
-    }
   }
 
   .contacts__item-property {
@@ -123,6 +131,13 @@
     height: 457px;
 
     margin-bottom: 55px;
+
+    background-image: url("../img/map-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/map-tablet@2x.jpg");
+    }
   }
 
   .contacts__bottom-wrapper {
@@ -151,14 +166,15 @@
   .contacts__wrapper {
     width: 1050px;
     margin-bottom: 0;
-    padding: 140px 0 78px 174px;
+    padding: 140px 550px 48px 174px;
+
+    background-size: auto 23px;
   }
 
   .contacts__title {
     @include section-header-desktop;
 
     margin-bottom: 49px;
-    padding-right: 550px;
 
     &::after {
       top: -15%;
@@ -167,20 +183,15 @@
   }
 
   .contacts__list {
-    flex-direction: column;
-  }
+    //flex-direction: column;
 
-  .contacts__item {
-    &:first-of-type {
-      margin-bottom: 30px;
-    }
-
-    &:last-of-type {
-      margin-left: 0;
-    }
+    //для IE11
+    display: block;
   }
 
   .contacts__item-property {
+    flex-shrink: 0;
+
     margin-right: 25px;
     margin-left: 0;
   }
@@ -192,6 +203,13 @@
     width: 525px;
 
     margin-bottom: 0;
+
+    background-image: url("../img/map-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/map-desktop@2x.jpg");
+    }
   }
 
   .contacts__bottom-wrapper {
