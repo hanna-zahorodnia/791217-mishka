@@ -36,12 +36,12 @@
     position: absolute;
     top: 100%;
     left: 49px;
-    width: 336px;
+    width: 342px;
     z-index: 1;
   }
 
   .site-list__item {
-    padding-right: 34px;
+    padding-right: 37px;
 
     border-top: none;
   }
@@ -56,10 +56,8 @@
 @media (min-width: $desktop-width) {
   .site-list {
     position: inherit;
-    //width: 382px;
     align-items: baseline;
     flex-wrap: wrap;
-    //flex: 0 0 50%;
 
     padding-right: 145px;
 
@@ -69,8 +67,6 @@
   }
 
   .site-list__item {
-    //flex: 1 0 190px;
-
     //для IE11
     flex: 0 0 auto;
     width: 190px;
@@ -96,7 +92,7 @@
     z-index: 1;
     display: block;
 
-    padding: 18px 62px 18px 0;
+    padding: 20px 62px 18px 0;
   }
 
   .site-list__extra-link {
