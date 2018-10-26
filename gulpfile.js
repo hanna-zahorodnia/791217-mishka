@@ -13,7 +13,7 @@ var imagemin = require("gulp-imagemin");
 var svgstore = require("gulp-svgstore");
 var del = require("del");
 var uglify = require("gulp-uglify");
-var pump = require('pump');
+var pump = require("pump");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -70,10 +70,10 @@ gulp.task("sprite", function () {
 
 gulp.task("scripts", function (cb) {
   pump([
-        gulp.src('source/js/script.js'),
+        gulp.src(["source/js/*.js", "!source/js/*.min.js"]),
         uglify(),
-        rename("script.min.js"),
-        gulp.dest('source/js')
+        rename({suffix: ".min"}),
+        gulp.dest("source/js")
     ],
     cb
   );
