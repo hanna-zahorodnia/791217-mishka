@@ -17,7 +17,7 @@ $lh: 24px;
   display: flex;
   flex-direction: column;
 
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 
   border: $border;
 
@@ -40,7 +40,7 @@ $lh: 24px;
 .catalog__image-link {
   order: -1;
 
-  margin-bottom: 27px;
+  margin-bottom: 28px;
 }
 
 .catalog__image {
@@ -145,7 +145,7 @@ $lh: 24px;
   .catalog__item-price {
     margin-top: auto;
     margin-left: 364px;
-    padding-top: 22px;
+    padding-top: 24px;
     padding-bottom: 25px;
 
     font-size: $primary-font-size;
@@ -207,6 +207,6 @@ $lh: 24px;
   }
 
   .catalog__item-price {
-    margin: auto 27px 0 27px;
+    margin: auto 25px 0;
   }
 }

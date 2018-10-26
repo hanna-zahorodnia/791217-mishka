@@ -6,8 +6,9 @@
   <title>Каталог товаров магазина Мишка</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
+  <link href="fonts/opensans.woff2" rel="preload" as="font">
   <link href="css/style.min.css" rel="stylesheet">
-  <script src="js/picturefill.js"></script>
+  <script src="js/picturefill.min.js"></script>
 </head>
 
 <body>
@@ -209,6 +210,7 @@
     </div>
   </footer>
 
+  <div class="overlay"></div>
   <section class="modal">
     <div class="modal__wrapper">
       <h1 class="modal__title">Добавить в&nbsp;корзину</h1>
@@ -233,7 +235,12 @@
     </div>
   </section>
 
-  <script src="js/catalog.js"></script>
+  <script src="js/svg4everybody.min.js"></script>
+  <script>
+    svg4everybody();
+
+  </script>
+  <script src="js/script.min.js"></script>
 
 </body>
 
