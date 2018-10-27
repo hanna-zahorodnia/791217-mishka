@@ -95,16 +95,8 @@
   }
 
   .advantages__list {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-
-  .advantages__list-wrapper {
-    flex-basis: 50%;
-
-    &:first-of-type {
-      margin-right: 10px;
-    }
+    column-count: 2;
+    column-gap: 0;
   }
 
   .advantages__item {
@@ -113,6 +105,8 @@
 
     margin-bottom: 51px;
     padding-right: 30px;
+
+    break-inside: avoid;
   }
 }
 
@@ -129,6 +123,6 @@
   }
 
   .advantages__item {
-    padding-right: 45px;
+    padding-right: 55px;
   }
 }
