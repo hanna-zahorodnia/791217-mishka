@@ -39,6 +39,14 @@
     border: 2px solid #63d1bb;
   }
 
+  &:hover + .modal-form__item-size {
+    border: 2px solid rgba($color: #444444, $alpha: 0.3);
+  }
+
+  &:focus + .modal-form__item-size {
+    border: 2px solid rgba($color: #444444, $alpha: 0.3);
+  }
+
   &:active + .modal-form__item-size {
     border: 2px solid #63d1bb;
   }
@@ -59,6 +67,10 @@
   border: none;
 
   &:hover {
+    background-color: #59d5bc;
+  }
+
+  &:focus {
     background-color: #59d5bc;
   }
 

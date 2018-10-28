@@ -23,8 +23,8 @@
     content: "";
 
     position: absolute;
-    bottom: 57%;
-    left: 3%;
+    top: 6px;
+    left: 8px;
     width: 32px;
     height: 37px;
 
@@ -37,7 +37,6 @@
   }
 
   &--scandic::before {
-    bottom: 66%;
     left: 0;
     width: 47px;
     height: 27px;
@@ -46,8 +45,7 @@
   }
 
   &--likes::before {
-    bottom: 61%;
-    left: 3%;
+    top: 11px;
     width: 34px;
     height: 28px;
 
@@ -55,8 +53,8 @@
   }
 
   &--handmade::before {
-    bottom: 57%;
-    left: 1%;
+    top: 9px;
+    left: 3px;
     width: 35px;
     height: 34px;
 
@@ -64,7 +62,7 @@
   }
 
   &--domestic::before {
-    bottom: 67%;
+    top: 10px;
     left: -2%;
     width: 55px;
     height: 23px;
@@ -73,8 +71,8 @@
   }
 
   &--present::before {
-    bottom: 60%;
-    left: 1%;
+    top: 8px;
+    left: 3px;
     width: 33px;
     height: 32px;
 
@@ -96,7 +94,7 @@
 
   .advantages__list {
     column-count: 2;
-    column-gap: 0;
+    column-gap: 10px;
   }
 
   .advantages__item {
