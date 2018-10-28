@@ -122,6 +122,10 @@
     @include section-header-desktop;
   }
 
+  .advantages__list {
+    padding: 0;
+  }
+
   .advantages__item {
     padding-right: 55px;
   }
