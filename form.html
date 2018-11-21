@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Форма заказа товаров в магазине Мишка</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link href="fonts/opensans.woff2" rel="preload" as="font">
+  <link href="css/style.min.css" rel="stylesheet">
+  <script src="js/picturefill.min.js"></script>
+</head>
+
+<body>
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <a class="page-header__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Магазин игрушек ручной работы Мишка">
+        </picture>
+      </a>
+      <nav class="main-navigation main-navigation--closed main-navigation--nojs">
+        <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-navigation__wrapper">
+          <ul class="main-navigation__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link site-list__link--knitting">Вязание на заказ</a>
+            </li>
+            <li class="site-list__extra-item">
+              <a class="site-list__extra-link " href="#">Новые поступления</a>
+            </li>
+            <li class="site-list__extra-item">
+              <a class="site-list__extra-link" href="#">Распродажа</a>
+            </li>
+          </ul>
+          <ul class="main-navigation__list user-list">
+            <li class="user-list__item">
+              <a class="user-list__link user-list__link--search" href="#">
+                <svg class="user-list__icon user-list__icon--search" height="18" width="18" aria-hidden="true" role="presentation">
+                  <use xlink:href="img/sprite.svg#icon-search"></use>
+                </svg>Поиск по сайту
+              </a>
+            </li>
+            <li class="user-list__item user-list__item--cart">
+              <a class="user-list__link user-list__link--cart" href="#">
+                <svg class="user-list__icon user-list__icon--cart" height="18" width="21" aria-hidden="true" role="presentation">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                </svg>Корзина: <span>пока пуста</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <p class="page-header__label">Бесплатная доставка по России</p>
+    </div>
+  </header>
+  <main class="page">
+    <h1 class="page__title">Вязание на заказ</h1>
+    <div class="container">
+      <p class="page__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
+        свяжемся с вами, чтобы уточнить детали.</p>
+    </div>
+    <section class="order">
+      <div class="order__wrapper">
+        <form class="order__form" method="POST" action="https://echo.htmlacademy.ru">
+          <fieldset class="order__fieldset">
+            <div class="order__fieldset-container order__fieldset-container--type">
+              <h3 class="order__field-title order__field-title--type">Тип</h3>
+              <ul class="order__type-list">
+                <li class="order__type-item order__type-item--checked">
+                  <input class="visually-hidden order__radio" type="radio" name="type" value="accessory" id="accessory"
+                    checked>
+                  <label class="order__label order__label--type" for="accessory">Аксессуар для интерьера</label>
+                </li>
+                <li class="order__type-item">
+                  <input class="visually-hidden order__radio" type="radio" name="type" value="toys" id="toy">
+                  <label class="order__label order__label--type" for="toy">Детская игрушка</label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+          <fieldset class="order__fieldset order__fieldset--color">
+            <div class="order__fieldset-container order__fieldset-container--color">
+              <h3 class="order__field-title order__field-title--color">Цвет</h3>
+              <ul class="order__color-list">
+                <li class="order__color-item order__color-item--checked">
+                  <input class="visually-hidden order__checkbox" type="checkbox" name="white" id="white" checked>
+                  <label class="order__label" for="white">Белый</label>
+                </li>
+                <li class="order__color-item order__color-item--checked">
+                  <input class="visually-hidden order__checkbox" type="checkbox" name="grey" id="grey" checked>
+                  <label class="order__label" for="grey">Серый</label>
+                </li>
+                <li class="order__color-item">
+                  <input class="visually-hidden order__checkbox" type="checkbox" name="tiffany" id="tiffany">
+                  <label class="order__label" for="tiffany">«Тиффани»</label>
+                </li>
+                <li class="order__color-item">
+                  <input class="visually-hidden order__checkbox" type="checkbox" name="black" id="black">
+                  <label class="order__label" for="black">Черный</label>
+                </li>
+                <li class="order__color-item">
+                  <input class="visually-hidden order__checkbox" type="checkbox" name="pink" id="pink">
+                  <label class="order__label" for="pink">Розовый</label>
+                </li>
+                <li class="order__color-item">
+                  <input class="visually-hidden order__checkbox" type="checkbox" name="orange" id="orange">
+                  <label class="order__label" for="orange">Оранжевый</label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+          <fieldset class="order__fieldset order__fieldset--personal">
+            <div class="order__fieldset-container order__fieldset-container--personal">
+              <h3 class="order__field-title order__field-title--personal">ФИО</h3>
+              <div class="order__personal-container">
+                <div class="order__field">
+                  <label class="order__field-label" for="name-field">Имя:</label>
+                  <input class="order__input" id="name-field" type="text" name="name" value="" placeholder="Введите ваше имя*"
+                    required>
+                </div>
+                <div class="order__field">
+                  <label class="order__field-label" for="last-name-field">Фамилия:</label>
+                  <input class="order__input" id="last-name-field" type="text" name="last-name" value="" placeholder="Укажите фамилию*"
+                    required>
+                </div>
+                <div class="order__field">
+                  <label class="order__field-label" for="patronymic-field">Отчество:</label>
+                  <input class="order__input" id="patronymic-field" type="text" name="patronymic" value="" placeholder="Отчество, если желаете">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="order__fieldset order__fieldset--phone">
+            <div class="order__fieldset-container order__fieldset-container--phone">
+              <h3 class="order__field-title order__field-title--phone">Тел</h3>
+              <div class="order__field">
+                <input class="order__input order__input--phone" type="tel" name="phone-number" id="phone-number" value=""
+                  placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+                <label class="visually-hidden" for="phone-number">Номер телефона</label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="order__fieldset order__fieldset--email">
+            <div class="order__fieldset-container order__fieldset-container--email">
+              <h3 class="order__field-title order__field-title--email">E-mail</h3>
+              <div class="order__field">
+                <input class="order__input order__input--email" type="email" name="email" id="email" value=""
+                  placeholder="Ваш Email*" required>
+                <label class="visually-hidden" for="email">E-mail</label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="order__fieldset">
+            <div class="order__fieldset-container order__fieldset-container--comment">
+              <h3 class="order__field-title order__field-title--comment">Доп</h3>
+              <div class="order__field order__field--comment">
+                <textarea class="order__comment" id="comment" name="comment" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                <label class="visually-hidden" for="comment">Дополнительная информация</label>
+              </div>
+            </div>
+          </fieldset>
+          <div class="order__bottom-wrapper">
+            <p class="order__required"><sup>*</sup> Поля обязательны для заполнения</p>
+            <button class="order__button button" type="submit">Отправить заказ</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper container">
+      <a class="page-footer__logo" href="index.html">
+        <svg class="page-footer__logo-image" height="34" width="102">
+          <title>Магазин игрушек ручной работы Мишка</title>
+          <use xlink:href="img/sprite.svg#icon-logo-footer"></use>
+        </svg>
+      </a>
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="#">
+            <span class="visually-hidden">Инстаграм</span>
+            <svg class="social__link-icon" width="22" height="21" aria-hidden="true" role="presentation">
+              <use xlink:href="img/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="#">
+            <span class="visually-hidden">Фейсбук</span>
+            <svg class="social__link-icon" width="15" height="29" aria-hidden="true" role="presentation">
+              <use xlink:href="img/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="#">
+            <span class="visually-hidden">Твиттер</span>
+            <svg class="social__link-icon" width="24" height="20" aria-hidden="true" role="presentation">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
+        <b class="copyright__text">Разработано</b>
+        <svg class="copyright__image" width="27" height="34">
+          <title>HTML Academy</title>
+          <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+        </svg>
+      </a>
+    </div>
+  </footer>
+  <script src="js/svg4everybody.min.js"></script>
+  <script>
+    svg4everybody();
+
+  </script>
+  <script src="js/script.min.js"></script>
+
+</body>
+
+</html>
